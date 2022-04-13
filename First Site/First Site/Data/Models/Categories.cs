@@ -10,7 +10,7 @@ namespace First_Site.Data.Models
         public int id { set; get; }
         public string categoryName { set; get; }
 
-        
+        //ввв
         public List<Page> pages{ set; get; }
     }
 }
