@@ -10,6 +10,5 @@ namespace First_Site.Data.Models
         public int id { set; get; }
         public string categoryName { set; get; }
         public List<Page> pages{ set; get; }
-        //ввв
     }
 }
