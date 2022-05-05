@@ -10,6 +10,7 @@ namespace First_site_V2.Interfaces
     public interface IProfileManager
     {
         Profile GetProfile();
-
+        ICollection<Profile> GetAll();
+        Profile PutLP(string login, string password);
     }
 }

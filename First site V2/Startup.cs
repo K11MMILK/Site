@@ -50,7 +50,7 @@ namespace First_site_V2
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Page}/{action=Profile}/{id?}");
+                    pattern: "{controller=Home}/{action=Login}/{id?}");
             });
         }
     }

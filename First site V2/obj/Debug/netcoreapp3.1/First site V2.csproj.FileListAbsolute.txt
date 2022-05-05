@@ -39,3 +39,45 @@ C:\Users\Mila\source\repos\First site V2\First site V2\obj\Debug\netcoreapp3.1\F
 C:\Users\Mila\source\repos\First site V2\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\ugh.cshtml.g.cs
 C:\Users\Mila\source\repos\First site V2\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Friends.cshtml.g.cs
 C:\Users\Mila\source\repos\First site V2\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Profile.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.exe
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.deps.json
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.runtimeconfig.json
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.runtimeconfig.dev.json
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.dll
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.pdb
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.Views.dll
+C:\Users\Mila\Source\Repos\Site\First site V2\bin\Debug\netcoreapp3.1\First site V2.Views.pdb
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.csproj.AssemblyReference.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.AssemblyInfoInputs.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.AssemblyInfo.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.csproj.CoreCompileInputs.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorAssemblyInfo.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorAssemblyInfo.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\staticwebassets\First site V2.StaticWebAssets.Manifest.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\staticwebassets\First site V2.StaticWebAssets.xml
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\scopedcss\bundle\First site V2.styles.css
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.TagHelpers.input.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.TagHelpers.output.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorCoreGenerate.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Friends.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Profile.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorTargetAssemblyInfo.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorTargetAssemblyInfo.cs
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.Views.pdb
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.dll
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.pdb
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.genruntimeconfig.cache
+C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.csproj.CopyComplete

@@ -24,5 +24,21 @@ namespace First_site_V2.Interfaces
         {
             return context.People[0].Friends;
         }
+
+        public ICollection<Profile> GetAll()
+        {
+            return context.People;
+        }
+
+        public Profile PutLP(string login, string password)
+        {
+           
+         foreach(var human in context.People)
+            {
+                if (human.login == login && human.password == password) { return human; }
+            }
+            return null;
+        }
+
     }
 }
