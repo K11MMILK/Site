@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace First_site_V2.Interfaces
 {
-    public class ProfileManager : IProfileManager
+    public class ProfileManager : IProfileManager, IFriendsManager
     {
         ProfileContext context;
         public ProfileManager()
@@ -16,7 +16,13 @@ namespace First_site_V2.Interfaces
         }
         public Profile GetProfile()
         {
-            return context.human;
+            return context.People[0];
+
+        }
+
+        public ICollection<Profile> GetFriends()
+        {
+            return context.People[0].Friends;
         }
     }
 }

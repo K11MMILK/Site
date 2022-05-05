@@ -9,19 +9,22 @@ namespace First_site_V2.Controllers
 {
     public class PageController : Controller
     {
-        private IProfileManager manager;
+        private IProfileManager pmanager;
+        private IFriendsManager fmanager;
         public PageController()
         {
-            manager = new ProfileManager();
+            pmanager = new ProfileManager();
+            fmanager = new ProfileManager();
         }
         public IActionResult Profile()
         {
-            var Pages = manager.GetPage();
+            var Pages = pmanager.GetProfile();
             return View(Pages);
         }
         public IActionResult Friends()
         {
-            var Friends = manager.GetFriends();
+            var Friends = fmanager.GetFriends();
+            return View(Friends);
         }
     }
 }

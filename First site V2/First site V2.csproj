@@ -5,12 +5,4 @@
     <RootNamespace>First_site_V2</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Context\aaaaaaaaaaaaaaaa" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Context\aaaaaaaaaaaaaaaa" />
-  </ItemGroup>
-
 </Project>
