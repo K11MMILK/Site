@@ -1,4 +1,5 @@
 ﻿using First_site_V2.Interfaces;
+using First_site_V2.Storage.Entity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,21 +11,19 @@ namespace First_site_V2.Controllers
     public class PageController : Controller
     {
         private IProfileManager pmanager;
-        private IFriendsManager fmanager;
-        public PageController()
+        public PageController(IProfileManager pmanager)
         {
-            pmanager = new ProfileManager();
-            fmanager = new ProfileManager();
+            this.pmanager = pmanager;
         }
         public IActionResult Profile()
         {
-            var Pages = pmanager.GetProfile();
-            return View(Pages);
+            Profile Page = new Profile(1, "Empty", "Empty", "Empty", "Empty");
+            if (pmanager.GetProfile() != null)
+            {
+                Page = pmanager.GetProfile();
+            }
+            return View(Page);
         }
-        public IActionResult Friends()
-        {
-            var Friends = fmanager.GetFriends();
-            return View(Friends);
-        }
+       
     }
 }

@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Mila\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\vasil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2\\First site V2.csproj",
+      "projectUniqueName": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj",
       "projectName": "First site V2",
-      "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2\\First site V2.csproj",
-      "packagesPath": "C:\\Users\\Mila\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2\\obj\\",
+      "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj",
+      "packagesPath": "C:\\Users\\vasil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mila\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -68,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

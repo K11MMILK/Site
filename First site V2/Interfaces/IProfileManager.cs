@@ -11,6 +11,9 @@ namespace First_site_V2.Interfaces
     {
         Profile GetProfile();
         ICollection<Profile> GetAll();
-        Profile PutLP(string login, string password);
+        void AddProfile(string login, string password, string name, string surname);
+
+        Profile Current(string login, string password);
+        string a();
     }
 }

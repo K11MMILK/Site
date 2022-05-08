@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using First_site_V2.Context;
 
 namespace First_site_V2.Controllers
 {
@@ -20,11 +21,15 @@ namespace First_site_V2.Controllers
         //{
         //    _logger = logger;
         //}
+
+
         private IProfileManager manager;
-        public HomeController()
+        public HomeController(IProfileManager manager)
         {
-            manager = new ProfileManager();
+            this.manager = manager;
         }
+
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -33,18 +38,32 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult Login(string login, string password)
         {
-            List<Profile> people = new List<Profile>(manager.GetAll());
-            for(var i = 0; i < people.Count; i++)
+            if (login != null)
             {
-                if (login == people[i].login)
+                if (manager.Current(login, password) == null)
                 {
-                    string authData = "This Login is not avaible";
-                    return Content(authData);
+                    return Content("Wrong Login or Password");
                 }
             }
-
+          
             return View();
         }
+
+
+        [HttpGet]
+        public IActionResult Registration()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Registration(string login, string password, string name, string surname)
+        {
+            manager.AddProfile(login, password, name, surname);
+            return View();
+        }
+        
         public IActionResult Index()
         {
             return View();

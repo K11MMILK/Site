@@ -11,7 +11,8 @@ namespace First_site_V2.Context
         public List<Profile> People= new List<Profile> { };
         public ProfileContext()
         {
-            People.Add(new Profile(1, "Klim", "Vasilev", "K11M","vasilev"));
+
+            //People.Add(new Profile(1, "Klim", "Vasilev", "K11M", "vasilev"));
             //People.Add(new Profile(2, "aaa", "Vasileva", "potata", "https://html5book.ru/wp-content/uploads/2017/08/pastel-rose.jpg"));
             //People.Add(new Profile(3, "bogdan", "bogomdan", "p3nn15", "https://cdn1.flamp.ru/75fabf2654ec6a76b0c40b6118977fe7_300_300.jpg"));
             //People.Add(new Profile(4, "Kroll", "Barista", "Mudila", "https://sun9-49.userapi.com/s/v1/if1/hsfWYGA57fkAdtUIq9lhgbTaIo-SqT8LTJlhAVW78LhDGx7M1hPMkYr3KSqFgXIamdIBEw6Y.jpg?size=1440x2160&quality=96&type=album"));
@@ -20,7 +21,7 @@ namespace First_site_V2.Context
             //People[0].Friends.Add(People[2]);
             //People[0].Friends.Add(People[3]);
             //People[0].Friends.Add(People[4]);
-            
+
 
         }
 
