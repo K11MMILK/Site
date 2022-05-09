@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First site V2", "First site V2\First site V2.csproj", "{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "First site V2", "First site V2\First site V2.csproj", "{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +13,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0FF7DE-471C-4AD7-8FCC-A6E1732E150D}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

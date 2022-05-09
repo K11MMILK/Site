@@ -104,11 +104,9 @@ C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\scopedcss
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.TagHelpers.input.cache
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.TagHelpers.output.cache
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.RazorCoreGenerate.cache
-C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
-C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Friends.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\Profile.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -122,3 +120,6 @@ C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First sit
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.pdb
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.genruntimeconfig.cache
 C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\First site V2.csproj.CopyComplete
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Friends\Friends.cshtml.g.cs
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\PersonProfile\PersonProfile.cshtml.g.cs
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\netcoreapp3.1\Razor\Views\Page\AllPeople.cshtml.g.cs

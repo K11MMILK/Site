@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace First_site_V2.Interfaces
 {
-    interface IFriendsManager
+    public interface IFriendsManager
     {
         ICollection<Profile> GetFriends();
         void AddFriend();
+        ICollection<Profile> GetAllPeople();
+        Profile GetProfile(int id);
         ICollection<Profile> SearchFriends();
     }
 }

@@ -8,7 +8,7 @@ namespace First_site_V2.Controllers
 {
     public class PersonProfileController : Controller
     {
-        public IActionResult PersonProfile()
+        public IActionResult PersonProfile(int id)
         {
             return View();
         }

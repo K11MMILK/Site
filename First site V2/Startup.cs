@@ -28,7 +28,7 @@ namespace First_site_V2
             services.AddControllersWithViews();
             services.AddSingleton<ProfileContext>();
             services.AddTransient<IProfileManager, ProfileManager>();
-            services.AddTransient<IFriendsManager, ProfileManager>();
+            services.AddTransient<IFriendsManager, FriendsManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

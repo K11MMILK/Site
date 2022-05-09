@@ -10,10 +10,10 @@ namespace First_site_V2.Interfaces
     public interface IProfileManager
     {
         Profile GetProfile();
+        ICollection<Profile> SearchProfile(string nameorsurname);
         Profile GetProfile(string login, string password);
         ICollection<Profile> GetAll();
         void AddProfile(string login, string password, string name, string surname);
 
-        string a();
     }
 }

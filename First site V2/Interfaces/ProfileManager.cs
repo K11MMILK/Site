@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace First_site_V2.Interfaces
 {
-    public class ProfileManager : IProfileManager, IFriendsManager
+    public class ProfileManager : IProfileManager
     {
         ProfileContext context;
         public ProfileManager(ProfileContext context)
@@ -38,42 +38,26 @@ namespace First_site_V2.Interfaces
             return null;
         }
 
-        public ICollection<Profile> GetFriends()
-        {
-            return context.human.Friends;
-        }
+       
 
         public ICollection<Profile> GetAll()
         {
             return context.People;
         }
 
-        //public Profile PutLP(string login, string password)
-        //{
-           
-        // foreach(var human in context.People)
-        //    {
-        //        if (human.login == login && human.password == password) { return human; }
-        //    }
-        //    return null;
-        //}
-
         public void AddProfile(string login, string password, string name, string surname)
         {
             context.People.Add(new Profile(context.People.Count, login, password, name, surname));
         }
 
-        
-        public string a() { return context.People[0].name; }
-
-        public void AddFriend()
+        public ICollection<Profile> SearchProfile(string nameorsurname)
         {
-            
-        }
-
-        public ICollection<Profile> SearchFriends()
-        {
-            return null;
+            List<Profile> Founded = new List<Profile> { };
+            for(var i = 0; i < context.People.Count; i++)
+            {
+                if ((context.People[i].name == nameorsurname) || (context.People[i].surname == nameorsurname)) Founded.Add(context.People[i]);
+            }
+            return Founded;
         }
     }
 }
