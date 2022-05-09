@@ -9,5 +9,7 @@ namespace First_site_V2.Interfaces
     interface IFriendsManager
     {
         ICollection<Profile> GetFriends();
+        void AddFriend();
+        ICollection<Profile> SearchFriends();
     }
 }

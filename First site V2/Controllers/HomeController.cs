@@ -17,11 +17,7 @@ namespace First_site_V2.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        //public HomeController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
+       
 
         private IProfileManager manager;
         public HomeController(IProfileManager manager)
@@ -43,11 +39,12 @@ namespace First_site_V2.Controllers
             diologi_ted_a_ted patau = new diologi_ted_a_ted { };
             if (login != null)
             {
-
                 if (fl == null)
                 {
                     patau.fl = 1;
-                    return View(patau);
+                }
+                else { patau.fl = 2;
+                    return View("~/Views/Page/Profile.cshtml", fl);
                 }
             }
           
@@ -66,7 +63,8 @@ namespace First_site_V2.Controllers
         public IActionResult Registration(string login, string password, string name, string surname)
         {
             manager.AddProfile(login, password, name, surname);
-            return View();
+            Profile dick = manager.GetProfile(login, password);
+            return View("~/Views/Page/Profile.cshtml", dick);
         }
         
         public IActionResult Index()

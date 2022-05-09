@@ -17,6 +17,7 @@ namespace First_site_V2.Interfaces
         }
         Profile IProfileManager.GetProfile()
         {
+            if (context.human == null) return null;
             return context.human;
         }
         public Profile GetProfile(string login, string password)
@@ -59,10 +60,20 @@ namespace First_site_V2.Interfaces
 
         public void AddProfile(string login, string password, string name, string surname)
         {
-            context.People.Add(new Profile(1, login, password, name, surname));
+            context.People.Add(new Profile(context.People.Count, login, password, name, surname));
         }
 
         
         public string a() { return context.People[0].name; }
+
+        public void AddFriend()
+        {
+            
+        }
+
+        public ICollection<Profile> SearchFriends()
+        {
+            return null;
+        }
     }
 }

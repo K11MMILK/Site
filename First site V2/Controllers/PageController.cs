@@ -17,12 +17,15 @@ namespace First_site_V2.Controllers
         }
         public IActionResult Profile()
         {
-            Profile Page = new Profile(1, "Empty", "Empty", "Empty", "Empty");
-            if (pmanager.GetProfile() != null)
+            Profile Page = pmanager.GetProfile();
+            diologi_ted_a_ted fl = new diologi_ted_a_ted();
+            fl.fl = 0;
+            if (Page.id!=-1)
             {
                 Page = pmanager.GetProfile();
+                return View(Page);
             }
-            return View(Page);
+            return View("~/Views/Home/Login.cshtml", fl);
         }
        
     }

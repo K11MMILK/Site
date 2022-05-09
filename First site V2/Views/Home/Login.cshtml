@@ -6,13 +6,16 @@
 
 <form method="post">
     @if (Model.fl == 1)
-    {<div>Wrong login or password</div><br/><br/>}
-    
-    <label>Логин:</label><br />
-    <input type="text" name="login" /><br /><br />
-    <label>Пароль:</label><br />
-    <input type="password" name="password" /><br />
-    <a href="~/Home/Registration" class="btn">Register</a><br /><br />
-    <input type="submit" value="Отправить" /><br /><br />
+    {<div>Wrong login or password</div><br /><br />}
 
+    <label>Логин:</label><br />
+    <input required type="text" name="login" /><br /><br />
+    <label>Пароль:</label><br />
+    <input required type="password" name="password" /><br />
+    <a href="~/Home/Registration" class="btn">Register</a><br /><br />
+    <button type="submit" value="Send">Send</button>
+    @if (Model.fl == 2) 
+    {
+        ;
+    }
 </form>
