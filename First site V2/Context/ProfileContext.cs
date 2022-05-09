@@ -9,6 +9,7 @@ namespace First_site_V2.Context
     public class ProfileContext
     {
         public List<Profile> People= new List<Profile> { };
+        public Profile human = new Profile { };
         public ProfileContext()
         {
 

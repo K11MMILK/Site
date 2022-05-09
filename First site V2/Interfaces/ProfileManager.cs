@@ -11,19 +11,35 @@ namespace First_site_V2.Interfaces
     public class ProfileManager : IProfileManager, IFriendsManager
     {
         ProfileContext context;
-        static Profile human = new Profile() { };
         public ProfileManager(ProfileContext context)
         {
             this.context = context;
         }
-        public Profile GetProfile()
+        Profile IProfileManager.GetProfile()
         {
-            return human;
+            return context.human;
+        }
+        public Profile GetProfile(string login, string password)
+        {
+            foreach (var pennis in context.People)
+            {
+                if (pennis.login == login)
+                {
+                    if (pennis.password == password)
+                    {
+                        context.human = pennis;
+                        return pennis;
+                    }
+                    else { return null; }
+                }
+
+            }
+            return null;
         }
 
         public ICollection<Profile> GetFriends()
         {
-            return human.Friends;
+            return context.human.Friends;
         }
 
         public ICollection<Profile> GetAll()
@@ -46,23 +62,7 @@ namespace First_site_V2.Interfaces
             context.People.Add(new Profile(1, login, password, name, surname));
         }
 
-        public Profile Current(string login, string password)
-        {
-            foreach (var pennis in context.People)
-            {
-                if (pennis.login == login)
-                {
-                    if (pennis.password == password)
-                    {
-                       human = pennis;
-                       return pennis;
-                    }
-                    else { return null; }
-                }
-                
-            }
-            return null;
-        }
+        
         public string a() { return context.People[0].name; }
     }
 }

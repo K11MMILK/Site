@@ -33,20 +33,25 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            diologi_ted_a_ted patau = new diologi_ted_a_ted { };
+            return View(patau);
         }
         [HttpPost]
         public IActionResult Login(string login, string password)
         {
+            Profile fl = manager.GetProfile(login, password);
+            diologi_ted_a_ted patau = new diologi_ted_a_ted { };
             if (login != null)
             {
-                if (manager.Current(login, password) == null)
+
+                if (fl == null)
                 {
-                    return Content("Wrong Login or Password");
+                    patau.fl = 1;
+                    return View(patau);
                 }
             }
           
-            return View();
+            return View(patau);
         }
 
 

@@ -1,9 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-@model ICollection<First_site_V2.Storage.Entity.Profile>
+@model First_site_V2.Storage.Entity.diologi_ted_a_ted
+
 
 <form method="post">
+    @if (Model.fl == 1)
+    {<div>Wrong login or password</div><br/><br/>}
+    
     <label>Логин:</label><br />
     <input type="text" name="login" /><br /><br />
     <label>Пароль:</label><br />
