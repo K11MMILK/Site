@@ -1,0 +1,26 @@
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.csproj.AssemblyReference.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.AssemblyInfoInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.AssemblyInfo.cs
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.csproj.CoreCompileInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.RazorAssemblyInfo.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.RazorAssemblyInfo.cs
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\appsettings.json
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.staticwebassets.runtime.json
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.exe
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.deps.json
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.runtimeconfig.json
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\First site V2.pdb
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\scopedcss\bundle\First site V2.styles.css
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\scopedcss\projectbundle\First site V2.bundle.scp.css
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.dll
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\refint\First site V2.dll
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.pdb
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\First site V2.genruntimeconfig.cache
+C:\Users\vasil\source\repos\Site\First site V2\obj\Debug\net6.0\ref\First site V2.dll
