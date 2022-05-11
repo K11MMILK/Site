@@ -1,4 +1,4 @@
-﻿@model First_site_V2.Storage.Entity.Profile
+﻿@model First_site_V2.Storage.Entities.Profile
 
 @*<div class="main">
     <div class="container">
@@ -12,16 +12,16 @@
     </div>
 </div>*@
 <div style="float: left; width: 20%;">
-    <form action =@Model.png target="_blank">
+    <form action =@Model.PNG target="_blank">
         <button >
-            <img src=@Model.png height="300" width="300"/>
+            <img src=@Model.PNG height="300" width="300"/>
             </button>
         </form>
         </div>
         <div style="float: right; width: 75%;">
             <div class="col-2-3">
-                <h2>@Model.name @Model.surname</h2>
-                    <p>@Model.status</p>
+                <h2>@Model.Name @Model.Surname</h2>
+                    <p>@Model.Status</p>
             </div>
         </div>
 <div class="clear">

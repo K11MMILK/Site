@@ -1,11 +1,11 @@
-﻿@model ICollection<First_site_V2.Storage.Entity.Profile>
+﻿@model ICollection<First_site_V2.Storage.Entities.Profile>
 <div>
     <form method="post">
         <input required type="text" name="nameorsurname" /><button type="submit" value="Send">Search</button><br /><br />
     </form>
         @foreach (var human in Model)
         {
-            <button><img src=@human.png height="100" width="100" />  @human.name @human.surname </button><br /><br />
+            <button><img src=@human.PNG height="100" width="100" /> @human.Name @human.Surname </button><br /><br />
         }
 
 </div>

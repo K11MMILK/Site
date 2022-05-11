@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-@model First_site_V2.Storage.Entity.diologi_ted_a_ted
+@model First_site_V2.Storage.Entities.diologi_ted_a_ted
 
 
 <form method="post">
@@ -14,8 +14,4 @@
     <input required type="password" name="password" /><br />
     <a href="~/Home/Registration" class="btn">Register</a><br /><br />
     <button type="submit" value="Send">Send</button>
-    @if (Model.fl == 2) 
-    {
-        ;
-    }
 </form>

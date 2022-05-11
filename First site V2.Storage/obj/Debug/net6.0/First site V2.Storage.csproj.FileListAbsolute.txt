@@ -1,0 +1,14 @@
+C:\Users\vasil\source\repos\Site\First site V2.Storage\bin\Debug\net6.0\First site V2.Storage.deps.json
+C:\Users\vasil\source\repos\Site\First site V2.Storage\bin\Debug\net6.0\First site V2.Storage.runtimeconfig.json
+C:\Users\vasil\source\repos\Site\First site V2.Storage\bin\Debug\net6.0\First site V2.Storage.dll
+C:\Users\vasil\source\repos\Site\First site V2.Storage\bin\Debug\net6.0\First site V2.Storage.pdb
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.csproj.AssemblyReference.cache
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.AssemblyInfoInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.AssemblyInfo.cs
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.csproj.CoreCompileInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.dll
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\refint\First site V2.Storage.dll
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.pdb
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\First site V2.Storage.genruntimeconfig.cache
+C:\Users\vasil\source\repos\Site\First site V2.Storage\obj\Debug\net6.0\ref\First site V2.Storage.dll

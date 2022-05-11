@@ -1,15 +1,8 @@
-﻿using First_site_V2.Interfaces;
+﻿using First_site_V2.Logic.Profiles;
 using First_site_V2.Models;
-using First_site_V2.Storage.Entity;
+using First_site_V2.Storage.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using First_site_V2.Context;
 
 namespace First_site_V2.Controllers
 {
@@ -17,7 +10,7 @@ namespace First_site_V2.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-       
+
 
         private IProfileManager manager;
         public HomeController(IProfileManager manager)
@@ -47,7 +40,7 @@ namespace First_site_V2.Controllers
                     return View("~/Views/Page/Profile.cshtml", fl);
                 }
             }
-          
+
             return View(patau);
         }
 
@@ -62,11 +55,17 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult Registration(string login, string password, string name, string surname)
         {
+
             manager.AddProfile(login, password, name, surname);
-            Profile dick = manager.GetProfile(login, password);
-            return View("~/Views/Page/Profile.cshtml", dick);
+            return View();
+
+
+
+            //manager.AddProfile(login, password, name, surname);
+            //Profile dick = manager.GetProfile(login, password);
+            //return View("~/Views/Page/Profile.cshtml", dick);
         }
-        
+
         public IActionResult Index()
         {
             return View();
@@ -76,7 +75,28 @@ namespace First_site_V2.Controllers
         {
             return View();
         }
-        
+
+        [HttpGet]
+        public IActionResult DeleteProfile() 
+        {
+            diologi_ted_a_ted patau = new diologi_ted_a_ted { };
+            return View(patau);
+        }
+        [HttpPost]
+        public IActionResult DeleteProfile(string login, string password)
+        {
+            diologi_ted_a_ted fl=new diologi_ted_a_ted {fl=manager.RemoveProfile(login, password) };
+            return View(fl);
+        }
+
+
+
+
+
+
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,0 +1,15 @@
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.csproj.AssemblyReference.cache
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.AssemblyInfoInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.AssemblyInfo.cs
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.csproj.CoreCompileInputs.cache
+C:\Users\vasil\source\repos\Site\First site V2.Logic\bin\Debug\net6.0\First site V2.Logic.deps.json
+C:\Users\vasil\source\repos\Site\First site V2.Logic\bin\Debug\net6.0\First site V2.Logic.dll
+C:\Users\vasil\source\repos\Site\First site V2.Logic\bin\Debug\net6.0\First site V2.Logic.pdb
+C:\Users\vasil\source\repos\Site\First site V2.Logic\bin\Debug\net6.0\First site V2.Storage.dll
+C:\Users\vasil\source\repos\Site\First site V2.Logic\bin\Debug\net6.0\First site V2.Storage.pdb
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.csproj.CopyComplete
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.dll
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\refint\First site V2.Logic.dll
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\First site V2.Logic.pdb
+C:\Users\vasil\source\repos\Site\First site V2.Logic\obj\Debug\net6.0\ref\First site V2.Logic.dll

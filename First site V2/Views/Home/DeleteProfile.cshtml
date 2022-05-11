@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Delete Profile";
+}
+@model First_site_V2.Storage.Entities.diologi_ted_a_ted
+<form method="post">
+    @if (Model.fl == 0)
+    {
+        <p>Chel ne nado</p>
+        <label>Логин:</label><br/>
+    <input required type="text" name="login" /><br /><br />
+    <label>Пароль:</label><br/>
+    <input required type="password" name="password" /><br/>
+    <a href="~/Home/Login" class="btn">Home</a><br /><br />
+    <button type="submit" value="Send">Send</button>
+    }
+    @if(Model.fl==2)
+    {
+    <p>Removal successed</p>
+    <a href="~/Home/Login" class="btn">Home</a><br /><br />
+    }
+    @if (Model.fl == 1)
+    {
+        <p>Ty Dolbaeb</p>
+        <label>Логин:</label><br/>
+    <input required type="text" name="login" /><br /><br />
+    <label>Пароль:</label><br/>
+    <input required type="password" name="password" /><br/>
+    <a href="~/Home/Login" class="btn">Home</a><br /><br />
+    <button type="submit" value="Send">Send</button>
+    }
+    
+   </form>

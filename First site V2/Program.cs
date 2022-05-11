@@ -1,13 +1,20 @@
-using First_site_V2.Context;
-using First_site_V2.Interfaces;
+using First_site_V2.Logic.Friends;
+using First_site_V2.Logic.Profiles;
+using First_site_V2.Storage;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<ProfileContext>();
-builder.Services.AddTransient<IProfileManager, ProfileManager>();
-builder.Services.AddTransient<IFriendsManager, FriendsManager>();
+services.AddControllersWithViews();
+
+services.AddScoped<IProfileManager, ProfileManager>();
+services.AddScoped<IFriendsManager, FriendsManager>();
+
+var connectionString = builder.Configuration.GetConnectionString("DbConnection");
+services.AddDbContext<GaisContext>(param => param.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
