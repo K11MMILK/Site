@@ -1,12 +1,12 @@
-﻿@model ICollection<First_site_V2.Storage.Entities.Profile>
-<div>
+﻿@{
+    ViewData["Title"] = "Friends";
+}
 
+@model ICollection<First_site_V2.Storage.Entities.Profile>
+
+<div>
     @foreach (var human in Model)
     {
-        
-            <button><img src=@human.PNG height="100" width="100" />  @human.Name @human.Surname </button>
-        
-
+        <button><img src=@human.PNG height="100" width="100" />  @human.Name @human.Surname </button>
     }
-
 </div>

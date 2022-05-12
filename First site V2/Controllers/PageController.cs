@@ -16,7 +16,7 @@ namespace First_site_V2.Controllers
             Profile Page = manager.GetProfile();
             diologi_ted_a_ted fl = new diologi_ted_a_ted();
             fl.fl = 0;
-            if (Page.Login!=null)
+            if (Page!=null&&Page.Login!=null)
             {
                 Page = manager.GetProfile();
                 return View(Page);

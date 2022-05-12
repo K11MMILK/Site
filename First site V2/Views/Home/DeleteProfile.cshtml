@@ -1,32 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Delete Profile";
 }
+
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
+
 <form method="post">
     @if (Model.fl == 0)
     {
-        <p>Chel ne nado</p>
+        <p>Чел не надо...</p>
         <label>Логин:</label><br/>
-    <input required type="text" name="login" /><br /><br />
-    <label>Пароль:</label><br/>
-    <input required type="password" name="password" /><br/>
-    <a href="~/Home/Login" class="btn">Home</a><br /><br />
-    <button type="submit" value="Send">Send</button>
+        <input required type="text" name="login" /><br /><br />
+        <label>Пароль:</label><br/>
+        <input required type="password" name="password" /><br/><br/>
+        <a href="~/Home/Login" class="btn">Home</a><br /><br />
+        <button type="submit" value="Send">Отправить</button>
     }
     @if(Model.fl==2)
     {
-    <p>Removal successed</p>
-    <a href="~/Home/Login" class="btn">Home</a><br /><br />
+        <p>Удаление прошло успешно...</p><br/>
+        <a href="~/Home/Login" class="btn">Home</a>
     }
     @if (Model.fl == 1)
     {
-        <p>Ty Dolbaeb</p>
+        <p>Логин или пароль не совпадают</p>
         <label>Логин:</label><br/>
-    <input required type="text" name="login" /><br /><br />
-    <label>Пароль:</label><br/>
-    <input required type="password" name="password" /><br/>
-    <a href="~/Home/Login" class="btn">Home</a><br /><br />
-    <button type="submit" value="Send">Send</button>
+        <input required type="text" name="login" /><br /><br />
+        <label>Пароль:</label><br/>
+        <input required type="password" name="password" /><br/><br/>
+        <a href="~/Home/Login" class="btn">Главная</a><br /><br />
+        <button type="submit" value="Send">Отправить</button>
     }
     
-   </form>
+</form>

@@ -13,14 +13,13 @@ namespace First_site_V2.Controllers
             this.manager = manager;
         }
         [HttpGet]
-        public IActionResult Friends()
+        public IActionResult Friends(string login)
         {
-            return View(manager.GetFriends());
+            return View(manager.GetFriends(login));
         }
         [HttpPost]
-        public IActionResult Friends(int id)
+        public IActionResult Friends()
         {
-
             return View("~/Views/Page/PersonProfile.cshtml");
         }
     }

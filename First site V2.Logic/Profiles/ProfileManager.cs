@@ -11,31 +11,20 @@ namespace First_site_V2.Logic.Profiles
         {
             this.context = context;
         }
-        Profile IProfileManager.GetProfile()
+        Profile IProfileManager.GetProfile(string login)
         {
-            if (context.human == null) return null;
-            return context.human;
+            return context.People.Find(login);
         }
         public Profile GetProfile(string login, string password)
         {
-            foreach (var pennis in context.People)
-            {
-                if (pennis.Login == login)
+            var profile = context.People.Find(login);
+            if (profile != null)
+                if (profile.Password == password)
                 {
-                    if (pennis.Password == password)
-                    {
-                        context.human = pennis;
-                        return pennis;
-                    }
-                    else { return null; }
+                    return profile;
                 }
-
-            }
             return null;
         }
-
-       
-
         public IList<Profile> GetAll()
         {
             return context.People.ToList();
@@ -50,29 +39,36 @@ namespace First_site_V2.Logic.Profiles
         public ICollection<Profile> SearchProfile(string nameorsurname)
         {
             List<Profile> Founded = new List<Profile> { };
-            foreach(var cock in context.People)
+            foreach(var person in context.People)
             {
-                if ((cock.Name == nameorsurname) || (cock.Surname == nameorsurname)) Founded.Add(cock);
+                if ((person.Name == nameorsurname) || (person.Surname == nameorsurname)) 
+                    Founded.Add(person);
             }
             return Founded;
         }
 
         public int RemoveProfile(string login, string password)
         {
-            var HumanForDelete = context.People.FirstOrDefault(x => x.Login == login);
-            if (HumanForDelete != null)
-            {
-                if (HumanForDelete.Password == password)
+            var profile = context.People.Find(login);
+            if (profile != null)
+                if (profile.Password == password)
                 {
-                    context.People.Remove(HumanForDelete);
+                    context.People.Remove(profile);
                     context.SaveChanges();
                     return 2;
                 }
-            }
             return 1;
-            
-            
-
+            //var HumanForDelete = context.People.FirstOrDefault(x => x.Login == login);
+            //if (HumanForDelete != null)
+            //{
+            //    if (HumanForDelete.Password == password)
+            //    {
+            //        context.People.Remove(HumanForDelete);
+            //        context.SaveChanges();
+            //        return 2;
+            //    }
+            //}
+            //return 1;
         }
     }
 }

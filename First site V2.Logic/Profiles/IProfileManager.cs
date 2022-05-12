@@ -5,7 +5,7 @@ namespace First_site_V2.Logic.Profiles;
 
 public interface IProfileManager
 {
-   Profile GetProfile();
+    Profile GetProfile(string login);
     ICollection<Profile> SearchProfile(string nameorsurname);
     Profile GetProfile(string login, string password);
     IList<Profile> GetAll();
