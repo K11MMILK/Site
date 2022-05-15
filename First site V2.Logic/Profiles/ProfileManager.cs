@@ -70,5 +70,20 @@ namespace First_site_V2.Logic.Profiles
             //}
             //return 1;
         }
+
+        public void AddFriend(string login, string friendLogin)
+        {
+            var person = context.People.Find(login);
+            person.Friends.Add(context.People.Find(friendLogin));
+            context.People.Update(person); //тут возможно по другому, я не уверена
+            context.SaveChanges();
+        }
+        public void RemoveFriend(string login, string friendLogin)
+        {
+            var person = context.People.Find(login);
+            person.Friends.Remove(context.People.Find(friendLogin));
+            context.People.Update(person); //тут возможно по другому, я не уверена
+            context.SaveChanges();
+        }
     }
 }

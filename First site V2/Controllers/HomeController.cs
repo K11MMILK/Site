@@ -22,27 +22,27 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            diologi_ted_a_ted patau = new diologi_ted_a_ted { };
-            return View(patau);
+            diologi_ted_a_ted fl = new diologi_ted_a_ted { };
+            return View(fl);
         }
         [HttpPost]
         public IActionResult Login(string login, string password)
         {
             _login = login;
-            Profile fl = manager.GetProfile(login, password);
-            diologi_ted_a_ted patau = new diologi_ted_a_ted { };
+            Profile patau = manager.GetProfile(login, password);
+            diologi_ted_a_ted fl = new diologi_ted_a_ted { };
             if (login != null)
             {
-                if (fl == null)
+                if (patau== null)
                 {
-                    patau.fl = 1;
+                    fl.fl = 1;
                 }
-                else { patau.fl = 2;
-                    return View("~/Views/Page/Profile.cshtml", fl);
+                else { fl.fl = 2;
+                    return View("/Views/Page/Profile.cshtml", patau);
                 }
             }
 
-            return View(patau);
+            return View(fl);
         }
 
 
@@ -56,15 +56,9 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult Registration(string login, string password, string name, string surname)
         {
-
+            _login = login;
             manager.AddProfile(login, password, name, surname);
-            return View();
-
-
-
-            //manager.AddProfile(login, password, name, surname);
-            //Profile dick = manager.GetProfile(login, password);
-            //return View("~/Views/Page/Profile.cshtml", dick);
+            return View("/Views/Page/Profile.cshtml", manager.GetProfile(login));
         }
 
         public IActionResult Index()

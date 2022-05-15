@@ -33,6 +33,7 @@ namespace First_site_V2.Logic.Friends
         public ICollection<Profile> GetFriends(string login)
         {
             var person = context.People.Find(login);
+            if(person== null) return null;
             return person.Friends;
         }
         public ICollection<Profile> SearchFriends(string login, string nameorsurname)

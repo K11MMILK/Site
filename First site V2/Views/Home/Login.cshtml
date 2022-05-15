@@ -3,16 +3,16 @@
 }
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
 
-
 <form method="post">
     @if (Model.fl == 1)
     {
         <div>Неправильный логин или пароль</div><br /><br />
     }
+    
     <label>Логин:</label><br />
-    <input required type="text" name="login" /><br /><br />
+    <input required type="text" name="login" value="1"/><br /><br />
     <label>Пароль:</label><br />
-    <input required type="password" name="password" /><br /><br />
+    <input required type="password" name="password" value="1"/><br /><br />
     <a href="~/Home/Registration" class="btn">Регистрация</a><br /><br />
-    <button type="submit" value="Send">Отправить</button>
+    <button type="submit">Отправить</button>
 </form>

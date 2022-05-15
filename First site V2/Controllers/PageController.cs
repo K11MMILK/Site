@@ -13,22 +13,32 @@ namespace First_site_V2.Controllers
             this.manager = manager;
             _login = HomeController._login;
         }
+        [HttpGet]
         public IActionResult Profile()
         {
-            Profile Page = manager.GetProfile(_login);
-            diologi_ted_a_ted fl = new diologi_ted_a_ted();
-            fl.fl = 0;
-            if (Page!=null&&Page.Login!=null)
-            {
-                Page = manager.GetProfile(_login);
-                return View(Page);
-            }
-            return View("~/Views/Home/Login.cshtml", fl);
+            return View(manager.GetProfile(_login));
+
         }
+        [HttpPost]
+        public IActionResult Profile(string login)
+        {
+            return View();
+
+        }
+
         [HttpGet]
         public IActionResult AllPeople()
         {
-            return View(manager.GetAll());
+            var patau=manager.GetAll();
+            foreach(var delete in patau)
+            {
+                if (delete.Login == _login)
+                {
+                    patau.Remove(delete);
+                    break;
+                }
+            }
+            return View(patau);
         }
         [HttpPost]
         public IActionResult AllPeople(string nameorsurname)
