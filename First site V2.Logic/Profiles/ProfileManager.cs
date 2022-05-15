@@ -33,6 +33,7 @@ namespace First_site_V2.Logic.Profiles
         public  void AddProfile(string login, string password, string name, string surname)
         {
             context.People.Add(new Profile(login, password, name, surname));
+            context.Friends.Add(new FriendList(login));
             context.SaveChanges();
         }
 
@@ -50,10 +51,13 @@ namespace First_site_V2.Logic.Profiles
         public int RemoveProfile(string login, string password)
         {
             var profile = context.People.Find(login);
+            
+            var pp = context.Friends.ToList();
             if (profile != null)
                 if (profile.Password == password)
                 {
                     context.People.Remove(profile);
+                    context.Friends.Remove(context.Friends.Find(login));
                     context.SaveChanges();
                     return 2;
                 }
@@ -74,15 +78,16 @@ namespace First_site_V2.Logic.Profiles
         public void AddFriend(string login, string friendLogin)
         {
             var person = context.People.Find(login);
-            person.Friends.Add(context.People.Find(friendLogin));
-            context.People.Update(person); //тут возможно по другому, я не уверена
+            //context.Friends.Add(new FriendList(login));
+            context.Friends.Find(login).Friends.Add(context.People.Find(friendLogin));
+            context.People.Update(person);
             context.SaveChanges();
         }
         public void RemoveFriend(string login, string friendLogin)
         {
             var person = context.People.Find(login);
-            person.Friends.Remove(context.People.Find(friendLogin));
-            context.People.Update(person); //тут возможно по другому, я не уверена
+            context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
+            context.People.Update(person); 
             context.SaveChanges();
         }
     }

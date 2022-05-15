@@ -15,15 +15,17 @@ namespace First_site_V2.Logic.Friends
         public void AddFriend(string login, string friendLogin)
         {
             var person = context.People.Find(login);
-            person.Friends.Add(context.People.Find(friendLogin));
-            context.People.Update(person); //тут возможно по другому, я не уверена
+            context.Friends.Add(new FriendList(login));
+            context.Friends.Find(login).Friends.Add(context.People.Find(friendLogin));
+            context.People.Update(person); 
             context.SaveChanges();
         }
         public void RemoveFriend(string login, string friendLogin)
         {
-            var person = context.People.Find(login);
-            person.Friends.Remove(context.People.Find(friendLogin));
-            context.People.Update(person); //тут возможно по другому, я не уверена
+            context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
+            //var person = context.People.Find(login);
+            //person.Friends.Remove(context.People.Find(friendLogin));
+            //context.People.Update(person); 
             context.SaveChanges();
         }
         public Profile GetProfile(string login)
@@ -34,13 +36,14 @@ namespace First_site_V2.Logic.Friends
         {
             var person = context.People.Find(login);
             if(person== null) return null;
-            return person.Friends;
+            var pen = context.Friends.Find(login).Friends;
+            return context.Friends.Find(login).Friends;
         }
         public ICollection<Profile> SearchFriends(string login, string nameorsurname)
         {
             var person = context.People.Find(login);
             var Founded = new List<Profile>();
-            foreach (var friend in person.Friends)
+            foreach (var friend in context.Friends.Find(login).Friends)
             {
                 if ((friend.Name == nameorsurname) || (friend.Surname == nameorsurname))
                     Founded.Add(friend);

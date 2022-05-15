@@ -15,12 +15,12 @@ namespace First_site_V2.Controllers
             _login = HomeController._login;
         }
         [HttpGet]
-        public IActionResult Friends(string login)
+        public IActionResult Friends()
         {
-            return View(manager.GetFriends(login));
+            return View(manager.GetFriends(_login));
         }
         [HttpPost]
-        public IActionResult Friends()
+        public IActionResult Friends(int a)
         {
             return View("~/Views/Page/PersonProfile.cshtml");
         }
