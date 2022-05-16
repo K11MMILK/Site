@@ -15,7 +15,7 @@ namespace First_site_V2.Logic.Friends
         public void AddFriend(string login, string friendLogin)
         {
             var person = context.People.Find(login);
-            context.Friends.Add(new FriendList(login));
+            //context.Friends.Add(new FriendList(login));
             context.Friends.Find(login).Friends.Add(context.People.Find(friendLogin));
             context.People.Update(person); 
             context.SaveChanges();
@@ -36,7 +36,7 @@ namespace First_site_V2.Logic.Friends
         {
             var person = context.People.Find(login);
             if(person== null) return null;
-            var pen = context.Friends.Find(context.People.Find(login).FriendListId);
+            var pen = context.People.Find(login).Friends;
             if(pen==null) return null; else return pen.Friends;
             
         }

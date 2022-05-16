@@ -34,7 +34,8 @@ namespace First_site_V2.Logic.Profiles
 
         public  void AddProfile(string login, string password, string name, string surname)
         {
-            context.People.Add(new Profile(login, password, name, surname));
+            var p = new Profile(login, password, name, surname);
+            context.People.Add(p);
             var i = context.People.Find(login).Friends;
             context.Friends.Add(i);
             context.SaveChanges();
@@ -83,9 +84,11 @@ namespace First_site_V2.Logic.Profiles
 
         public void AddFriend(string login, string friendLogin)
         {
-            var penns = context.Friends.Find(context.People.Find(login).FriendListId);
+            var a = context.People.Find(login).Friends;
+            var penns = context.Friends.Find(1);
             var cock = context.People.Find(friendLogin);
-            var a = context.People.Find(login).FriendListId;
+            
+           
             penns.Friends.Add(cock);
             context.Friends.Update(penns);
             context.SaveChanges();

@@ -15,10 +15,7 @@ namespace First_site_V2.Storage.Entities
         List<Video> Videos { get; set; }
 
         List<Community> Communities { get; set; }
-
-        [Required]
-       public int FriendListId { get; set; }
-        [ForeignKey(nameof(FriendListId))]
+        //public int FriendListId { get; set; }
         public virtual FriendList Friends { get; set; }
 
 #pragma warning disable CS8618
@@ -31,7 +28,8 @@ namespace First_site_V2.Storage.Entities
             Musics = new List<Music> { };
             Videos = new List<Video> { };
             Communities = new List<Community> { };
-            Friends = new FriendList(login);
+            Friends = new FriendList(1);
+            //FriendListId = Friends.Id;
             PNG=png;
         }
     }

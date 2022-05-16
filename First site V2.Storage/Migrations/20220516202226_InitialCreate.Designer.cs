@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_site_V2.Storage.Migrations
 {
     [DbContext(typeof(GaisContext))]
-    [Migration("20220516184846_InitialCreate")]
+    [Migration("20220516202226_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace First_site_V2.Storage.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<int>("FriendListId")
+                    b.Property<int>("FriendsId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -69,7 +69,7 @@ namespace First_site_V2.Storage.Migrations
 
                     b.HasKey("Login");
 
-                    b.HasIndex("FriendListId");
+                    b.HasIndex("FriendsId");
 
                     b.ToTable("People");
                 });
@@ -78,7 +78,7 @@ namespace First_site_V2.Storage.Migrations
                 {
                     b.HasOne("First_site_V2.Storage.Entities.FriendList", "Friends")
                         .WithMany("Friends")
-                        .HasForeignKey("FriendListId")
+                        .HasForeignKey("FriendsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

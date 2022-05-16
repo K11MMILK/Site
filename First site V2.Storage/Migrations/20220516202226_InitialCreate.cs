@@ -26,7 +26,7 @@ namespace First_site_V2.Storage.Migrations
                 {
                     Login = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FriendListId = table.Column<int>(type: "int", nullable: false),
+                    FriendsId = table.Column<int>(type: "int", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -37,17 +37,17 @@ namespace First_site_V2.Storage.Migrations
                 {
                     table.PrimaryKey("PK_People", x => x.Login);
                     table.ForeignKey(
-                        name: "FK_People_Friends_FriendListId",
-                        column: x => x.FriendListId,
+                        name: "FK_People_Friends_FriendsId",
+                        column: x => x.FriendsId,
                         principalTable: "Friends",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_People_FriendListId",
+                name: "IX_People_FriendsId",
                 table: "People",
-                column: "FriendListId");
+                column: "FriendsId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
