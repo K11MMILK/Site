@@ -36,8 +36,9 @@ namespace First_site_V2.Logic.Friends
         {
             var person = context.People.Find(login);
             if(person== null) return null;
-            var pen = context.Friends.Find(login).Friends;
-            return context.Friends.Find(login).Friends;
+            var pen = context.Friends.Find(context.People.Find(login).FriendListId);
+            if(pen==null) return null; else return pen.Friends;
+            
         }
         public ICollection<Profile> SearchFriends(string login, string nameorsurname)
         {

@@ -30,12 +30,18 @@ namespace First_site_V2.Logic.Profiles
             return context.People.ToList();
         }
 
+
+
         public  void AddProfile(string login, string password, string name, string surname)
         {
             context.People.Add(new Profile(login, password, name, surname));
-            context.Friends.Add(new FriendList(login));
+            var i = context.People.Find(login).Friends;
+            context.Friends.Add(i);
             context.SaveChanges();
         }
+
+
+
 
         public ICollection<Profile> SearchProfile(string nameorsurname)
         {
@@ -77,17 +83,20 @@ namespace First_site_V2.Logic.Profiles
 
         public void AddFriend(string login, string friendLogin)
         {
-            var person = context.People.Find(login);
-            //context.Friends.Add(new FriendList(login));
-            context.Friends.Find(login).Friends.Add(context.People.Find(friendLogin));
-            context.People.Update(person);
+            var penns = context.Friends.Find(context.People.Find(login).FriendListId);
+            var cock = context.People.Find(friendLogin);
+            var a = context.People.Find(login).FriendListId;
+            penns.Friends.Add(cock);
+            context.Friends.Update(penns);
             context.SaveChanges();
         }
         public void RemoveFriend(string login, string friendLogin)
         {
-            var person = context.People.Find(login);
-            context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
-            context.People.Update(person); 
+            //var person = context.People.Find(login);
+            //context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
+            //context.People.Update(person); 
+
+            context.People.Find(login).Friends.Friends.Remove(context.People.Find(friendLogin));
             context.SaveChanges();
         }
     }

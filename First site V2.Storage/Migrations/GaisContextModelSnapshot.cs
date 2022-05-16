@@ -23,10 +23,13 @@ namespace First_site_V2.Storage.Migrations
 
             modelBuilder.Entity("First_site_V2.Storage.Entities.FriendList", b =>
                 {
-                    b.Property<string>("Login")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasKey("Login");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.HasKey("Id");
 
                     b.ToTable("Friends");
                 });
@@ -39,9 +42,8 @@ namespace First_site_V2.Storage.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<string>("FriendListId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("FriendListId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -72,11 +74,13 @@ namespace First_site_V2.Storage.Migrations
 
             modelBuilder.Entity("First_site_V2.Storage.Entities.Profile", b =>
                 {
-                    b.HasOne("First_site_V2.Storage.Entities.FriendList", null)
+                    b.HasOne("First_site_V2.Storage.Entities.FriendList", "Friends")
                         .WithMany("Friends")
                         .HasForeignKey("FriendListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Friends");
                 });
 
             modelBuilder.Entity("First_site_V2.Storage.Entities.FriendList", b =>

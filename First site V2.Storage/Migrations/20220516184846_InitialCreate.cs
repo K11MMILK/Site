@@ -9,12 +9,24 @@ namespace First_site_V2.Storage.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Friends",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Friends", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "People",
                 columns: table => new
                 {
                     Login = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProfileLogin = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    FriendListId = table.Column<int>(type: "int", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -25,22 +37,26 @@ namespace First_site_V2.Storage.Migrations
                 {
                     table.PrimaryKey("PK_People", x => x.Login);
                     table.ForeignKey(
-                        name: "FK_People_People_ProfileLogin",
-                        column: x => x.ProfileLogin,
-                        principalTable: "People",
-                        principalColumn: "Login");
+                        name: "FK_People_Friends_FriendListId",
+                        column: x => x.FriendListId,
+                        principalTable: "Friends",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_People_ProfileLogin",
+                name: "IX_People_FriendListId",
                 table: "People",
-                column: "ProfileLogin");
+                column: "FriendListId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "People");
+
+            migrationBuilder.DropTable(
+                name: "Friends");
         }
     }
 }

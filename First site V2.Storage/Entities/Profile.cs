@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace First_site_V2.Storage.Entities
 {
@@ -15,7 +16,10 @@ namespace First_site_V2.Storage.Entities
 
         List<Community> Communities { get; set; }
 
-       public string FriendListId { get; set; }
+        [Required]
+       public int FriendListId { get; set; }
+        [ForeignKey(nameof(FriendListId))]
+        public virtual FriendList Friends { get; set; }
 
 #pragma warning disable CS8618
         public Profile() { }
@@ -27,7 +31,7 @@ namespace First_site_V2.Storage.Entities
             Musics = new List<Music> { };
             Videos = new List<Video> { };
             Communities = new List<Community> { };
-            FriendListId = login;
+            Friends = new FriendList(login);
             PNG=png;
         }
     }
