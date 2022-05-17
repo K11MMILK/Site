@@ -29,7 +29,7 @@ namespace First_site_V2.Controllers
         public IActionResult Login(string login, string password)
         {
             _login = login;
-            Profile patau = manager.GetProfile(login, password);
+            User patau = manager.GetProfile(login, password);
             diologi_ted_a_ted fl = new diologi_ted_a_ted { };
             if (login != null)
             {

@@ -6,11 +6,11 @@ namespace First_site_V2.Logic.Friends
 {
     public interface IFriendsManager
     {
-        ICollection<Profile> GetFriends(string login);
+        ICollection<User> GetFriends(string login);
         void AddFriend(string login, string friendLogin);
         void RemoveFriend(string login, string friendLogin);
-        IList<Profile> GetAllPeople();
-        Profile GetProfile(string login);
-        ICollection<Profile> SearchFriends(string login, string nameorsurname);
+        IList<User> GetAllPeople();
+        User GetProfile(string login);
+        ICollection<User> SearchFriends(string login, string nameorsurname);
     }
 }

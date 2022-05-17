@@ -11,13 +11,13 @@ namespace First_site_V2.Logic.Profiles
         {
             this.context = context;
         }
-        Profile IProfileManager.GetProfile(string login)
+        User IProfileManager.GetProfile(string login)
         {
-            return context.People.Find(login);
+            return context.User.Find(login);
         }
-        public Profile GetProfile(string login, string password)
+        public User GetProfile(string login, string password)
         {
-            var profile = context.People.Find(login);
+            var profile = context.User.Find(login);
             if (profile != null)
                 if (profile.Password == password)
                 {
@@ -25,18 +25,18 @@ namespace First_site_V2.Logic.Profiles
                 }
             return null;
         }
-        public IList<Profile> GetAll()
+        public IList<User> GetAll()
         {
-            return context.People.ToList();
+            return context.User.ToList();
         }
 
 
 
         public  void AddProfile(string login, string password, string name, string surname)
         {
-            var p = new Profile(login, password, name, surname);
-            context.People.Add(p);
-            var i = context.People.Find(login).Friends;
+            var p = new User(login, password, name, surname);
+            context.User.Add(p);
+            var i = context.User.Find(login).Friends;
             context.Friends.Add(i);
             context.SaveChanges();
         }
@@ -44,10 +44,10 @@ namespace First_site_V2.Logic.Profiles
 
 
 
-        public ICollection<Profile> SearchProfile(string nameorsurname)
+        public ICollection<User> SearchProfile(string nameorsurname)
         {
-            List<Profile> Founded = new List<Profile> { };
-            foreach(var person in context.People)
+            List<User> Founded = new List<User> { };
+            foreach(var person in context.User)
             {
                 if ((person.Name == nameorsurname) || (person.Surname == nameorsurname)) 
                     Founded.Add(person);
@@ -57,13 +57,13 @@ namespace First_site_V2.Logic.Profiles
 
         public int RemoveProfile(string login, string password)
         {
-            var profile = context.People.Find(login);
+            var profile = context.User.Find(login);
             
             var pp = context.Friends.ToList();
             if (profile != null)
                 if (profile.Password == password)
                 {
-                    context.People.Remove(profile);
+                    context.User.Remove(profile);
                     context.Friends.Remove(context.Friends.Find(login));
                     context.SaveChanges();
                     return 2;
@@ -84,9 +84,9 @@ namespace First_site_V2.Logic.Profiles
 
         public void AddFriend(string login, string friendLogin)
         {
-            var a = context.People.Find(login).Friends;
+            var a = context.User.Find(login).Friends;
             var penns = context.Friends.Find(1);
-            var cock = context.People.Find(friendLogin);
+            var cock = context.User.Find(friendLogin);
             
            
             penns.Friends.Add(cock);
@@ -99,7 +99,7 @@ namespace First_site_V2.Logic.Profiles
             //context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
             //context.People.Update(person); 
 
-            context.People.Find(login).Friends.Friends.Remove(context.People.Find(friendLogin));
+            context.User.Find(login).Friends.Friends.Remove(context.User.Find(friendLogin));
             context.SaveChanges();
         }
     }

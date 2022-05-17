@@ -14,36 +14,36 @@ namespace First_site_V2.Logic.Friends
         }
         public void AddFriend(string login, string friendLogin)
         {
-            var person = context.People.Find(login);
+            var person = context.User.Find(login);
             //context.Friends.Add(new FriendList(login));
-            context.Friends.Find(login).Friends.Add(context.People.Find(friendLogin));
-            context.People.Update(person); 
+            context.Friends.Find(login).Friends.Add(context.User.Find(friendLogin));
+            context.User.Update(person); 
             context.SaveChanges();
         }
         public void RemoveFriend(string login, string friendLogin)
         {
-            context.Friends.Find(login).Friends.Remove(context.People.Find(friendLogin));
+            context.Friends.Find(login).Friends.Remove(context.User.Find(friendLogin));
             //var person = context.People.Find(login);
             //person.Friends.Remove(context.People.Find(friendLogin));
             //context.People.Update(person); 
             context.SaveChanges();
         }
-        public Profile GetProfile(string login)
+        public User GetProfile(string login)
         {
-            return context.People.Find(login);
+            return context.User.Find(login);
         }
-        public ICollection<Profile> GetFriends(string login)
+        public ICollection<User> GetFriends(string login)
         {
-            var person = context.People.Find(login);
+            var person = context.User.Find(login);
             if(person== null) return null;
-            var pen = context.People.Find(login).Friends;
+            var pen = context.User.Find(login).Friends;
             if(pen==null) return null; else return pen.Friends;
             
         }
-        public ICollection<Profile> SearchFriends(string login, string nameorsurname)
+        public ICollection<User> SearchFriends(string login, string nameorsurname)
         {
-            var person = context.People.Find(login);
-            var Founded = new List<Profile>();
+            var person = context.User.Find(login);
+            var Founded = new List<User>();
             foreach (var friend in context.Friends.Find(login).Friends)
             {
                 if ((friend.Name == nameorsurname) || (friend.Surname == nameorsurname))
@@ -51,9 +51,9 @@ namespace First_site_V2.Logic.Friends
             }
             return Founded;
         }
-        public IList<Profile> GetAllPeople()
+        public IList<User> GetAllPeople()
         {
-            return context.People.ToList();
+            return context.User.ToList();
         }
     }
 }

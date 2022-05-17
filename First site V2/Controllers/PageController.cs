@@ -43,7 +43,7 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult AllPeople(string nameorsurname)
         {
-            List<Profile> popls = new List<Profile>(manager.SearchProfile(nameorsurname));
+            List<User> popls = new List<User>(manager.SearchProfile(nameorsurname));
             return View(popls);
         }
 

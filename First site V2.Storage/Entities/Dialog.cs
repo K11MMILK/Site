@@ -9,7 +9,7 @@ namespace First_site_V2.Storage.Entities
     {
         
         List<string> messege { get; set; }
-        Profile profile { get; set; }
+        User profile { get; set; }
 
     }
 }

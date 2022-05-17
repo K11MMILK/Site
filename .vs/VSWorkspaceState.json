@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\First site V2",
+    "\\First site V2.Logic",
+    "\\First site V2.Logic\\Profiles",
+    "\\First site V2\\Controllers",
+    "\\First site V2\\Views",
+    "\\First site V2\\Views\\Home"
   ],
-  "SelectedNode": "\\First site V2.sln",
+  "SelectedNode": "\\First site V2.Logic\\Profiles\\ProfileManager.cs",
   "PreviewInSolutionExplorer": false
 }
