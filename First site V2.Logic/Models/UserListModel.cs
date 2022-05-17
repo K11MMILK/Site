@@ -13,7 +13,7 @@ namespace First_site_V2.Logic.Models
         public void ConfigureMapping(Profile profile)
         {
             profile.CreateMap<User, UserListModel>()
-                .ForMember(x => x.FullName, cfg => cfg.MapFrom(x => x.Name + " " + x.Surname))
+                .ForMember(x => x.FullName, cfg => cfg.MapFrom(x => x.FirstName + " " + x.LastName))
                 .ForMember(x => x.NumberOfPosts, cfg => cfg.MapFrom(x => x.Posts.Count));
         }
     }

@@ -2,11 +2,6 @@
 using First_site_V2.Logic.Mapping;
 using First_site_V2.Storage.Entities;
 using First_site_V2.Storage.Entities.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace First_site_V2.Logic.Models
 {
@@ -21,7 +16,7 @@ namespace First_site_V2.Logic.Models
         public void ConfigureMapping(Profile profile)
         {
            profile.CreateMap<FriendRequest, ReceivedFriendRequestModel>()
-                .ForMember(f=>f.SenderFullName,cfg=>cfg.MapFrom(f=>f.Sender.Name+" "+f.Sender.Surname));
+                .ForMember(f=>f.SenderFullName,cfg=>cfg.MapFrom(f=>f.Sender.FirstName+" "+f.Sender.LastName));
         }
     }
 }

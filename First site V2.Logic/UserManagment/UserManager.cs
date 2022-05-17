@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using First_site_V2.Logic.Models;
 using First_site_V2.Logic.Photoes;
 using First_site_V2.Storage;
 using First_site_V2.Storage.Entities;
 using Microsoft.AspNetCore.Http;
 
-namespace First_site_V2.Logic.User
+namespace First_site_V2.Logic.UserManagment
 {
     public class UserManager : IUserManager
     {
@@ -19,6 +18,36 @@ namespace First_site_V2.Logic.User
             photoManager = _photoManager;
             mapper = _mapper;
         }
+
+        public IList<User> GetAll(int Id)
+        {
+            var person=context.Users.ToList();
+            foreach(var delete in person)
+            {
+                if (Convert.ToInt32(delete.Id) == Id)
+                {
+                    person.Remove(delete);
+                    break;
+                }
+            }
+            return person;
+        }
+
+        public IList<User> SearchByNameOrSurname(string NameOrSurname)
+        {
+            var person = context.Users.ToList();
+            var godnye = new List<User>();
+            foreach (var delete in person)
+            {
+                if (delete.FirstName == NameOrSurname||delete.LastName==NameOrSurname)
+                {
+                    godnye.Add(delete);
+                    
+                }
+            }
+            return godnye;
+        }
+
         public void AddFriend(int senderId, int receiverId)
         {
             if (UserExist(senderId)&&UserExist(receiverId)&&!CheckIfFriends(senderId,receiverId))
@@ -30,7 +59,10 @@ namespace First_site_V2.Logic.User
         }
         public bool UserExist(int id)
         {
-            return context.Users.Any(u => u.Id == id);
+            if (context.Users.Find(id)!=null)
+                return true;
+            else 
+                return false;
         }
 
         public void AddPNG(IFormFile photo, int UserId)
@@ -58,9 +90,9 @@ namespace First_site_V2.Logic.User
         public void EditUser(int id, string name, string surname, string login)
         {
             var user = context.Users.Find(id);
-            user.Name = name;
-            user.Surname = surname;
-            user.Login = login;
+            user.FirstName = name;
+            user.LastName = surname;
+            user.Email = login;
             //context.User.Update(user);
             context.SaveChanges();
         }
@@ -72,14 +104,15 @@ namespace First_site_V2.Logic.User
             else return null;
         }
 
-        public UserAccountModel UserDetailsFriendsAndPosts(int id, int pageIndex, int pageSize)
+        public User UserDetailsFriendsAndPosts(int id, int pageIndex, int pageSize)
         {
             if (UserExist(id))
             {
-                var accountmodel = context.Users.Where(x => x.Id == id)
-                    .ProjectTo<UserAccountModel>()
-                    .FirstOrDefault();
+                var accountmodel = context.Users.Where(x => Convert.ToInt32(x.Id) == id).FirstOrDefault();
+                return accountmodel;
             }
+            else return null;
+
         }
     }
 }

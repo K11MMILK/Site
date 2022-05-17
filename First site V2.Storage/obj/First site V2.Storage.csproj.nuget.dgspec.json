@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {}
+    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {
+    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
+        "projectUniqueName": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
         "projectName": "First site V2.Storage",
-        "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
-        "packagesPath": "C:\\Users\\Mila\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mila\\Source\\Repos\\Site\\First site V2.Storage\\obj\\",
+        "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
+        "packagesPath": "C:\\Users\\vasil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mila\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -51,6 +51,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

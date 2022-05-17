@@ -128,3 +128,11 @@ C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\scopedcss\project
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\First site V2.csproj.CopyComplete
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\First site V2.genruntimeconfig.cache
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\ref\First site V2.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

@@ -15,7 +15,7 @@ namespace First_site_V2.Logic.Models
         public void ConfigureMapping(Profile profile)
         {
             profile.CreateMap<FriendRequest, ReceivedFriendRequestModel>()
-                .ForMember(f => f.ReceiverFullName, cfg => cfg.MapFrom(f => f.Receiver.Name + " " + f.Receiver.Surname));
+                .ForMember(f => f.ReceiverFullName, cfg => cfg.MapFrom(f => f.Receiver.FirstName + " " + f.Receiver.LastName));
         }
     }
 }
