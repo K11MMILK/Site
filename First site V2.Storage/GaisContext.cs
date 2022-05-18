@@ -18,6 +18,7 @@ namespace First_site_V2.Storage
             //People[0].Friends.Add(People[4]);
         }
         public DbSet<Profile> People { get; set; }
+        public DbSet<Report> Reports { get; set; }
       
     }
 }

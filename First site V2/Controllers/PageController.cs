@@ -31,7 +31,12 @@ namespace First_site_V2.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        public IActionResult Report(string reportText)
+        {
+            manager.AddReport(manager.GetIdByLogin(_login), reportText);
+            return Content("Ваше мнение очень важно для Вас");
+        }
         [HttpGet]
         public IActionResult AllPeople()
         {

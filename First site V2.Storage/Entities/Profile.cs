@@ -7,6 +7,7 @@ namespace First_site_V2.Storage.Entities
     public class Profile : Page
     {
         [Key]
+        public int Id { get; set; }
         public string Login{ get; set; }
         public string Password{ get; set; }
 

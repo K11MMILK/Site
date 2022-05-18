@@ -13,11 +13,11 @@ namespace First_site_V2.Logic.Profiles
         }
         Profile IProfileManager.GetProfile(string login)
         {
-            return context.People.Find(login);
+            return context.People.Find(GetIdByLogin(login));
         }
         public Profile GetProfile(string login, string password)
         {
-            var profile = context.People.Find(login);
+            var profile = context.People.Find(GetIdByLogin(login));
             if (profile != null)
                 if (profile.Password == password)
                 {
@@ -35,6 +35,7 @@ namespace First_site_V2.Logic.Profiles
         public  void AddProfile(string login, string password, string name, string surname)
         {
             context.People.Add(new Profile(login, password, name, surname));
+            context.Reports.Add(new Report());
             context.SaveChanges();
         }
 
@@ -54,7 +55,7 @@ namespace First_site_V2.Logic.Profiles
 
         public int RemoveProfile(string login, string password)
         {
-            var profile = context.People.Find(login);
+            var profile = context.People.Find(GetIdByLogin(login));
             
             if (profile != null)
                 if (profile.Password == password)
@@ -77,6 +78,14 @@ namespace First_site_V2.Logic.Profiles
             //return 1;
         }
 
-       
+        public void AddReport(int Id, string reportText)
+        {
+            context.Reports.Find(Id).Reports.Add(new Report(reportText));
+        }
+
+        public int GetIdByLogin(string login)
+        {
+            return context.People.FirstOrDefault(x=>x.Login==login).Id;
+        }
     }
 }
