@@ -15,10 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vasil\source\repos\Site\First site V2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Friends/Friends.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJpZW5kc1xGcmllbmRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Home/DeleteProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

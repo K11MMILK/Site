@@ -11,6 +11,4 @@ public interface IProfileManager
     IList<Profile> GetAll();
     void AddProfile(string login, string password, string name, string surname);
     int RemoveProfile(string login, string password);
-    public void RemoveFriend(string login, string friendLogin);
-    public void AddFriend(string login, string friendLogin);
 }
