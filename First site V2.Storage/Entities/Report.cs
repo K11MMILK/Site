@@ -11,10 +11,12 @@ namespace First_site_V2.Storage.Entities
     {
         [Key]
         public int Id { get; set; }
+        public string SenderName { get; set; }
         public string ReportText { get; set; }
-        public Report(string reportText)
+        public Report(string reportText, string senderName)
         {
             ReportText = reportText;
+            SenderName = senderName;
         }
     }
 }

@@ -1,0 +1,7 @@
+﻿@model ICollection<First_site_V2.Storage.Entities.Report>
+<div>
+    @foreach(var report in Model)
+    {
+        <p>@report.SenderName - <text>@report.ReportText</text> </p> <br />
+    }
+</div>

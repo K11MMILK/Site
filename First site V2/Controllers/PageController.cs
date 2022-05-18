@@ -57,6 +57,10 @@ namespace First_site_V2.Controllers
             List<Profile> popls = new List<Profile>(manager.SearchProfile(nameorsurname));
             return View(popls);
         }
+        public IActionResult AllReports()
+        {
+            return View(manager.GetAllReports());
+        }
 
     }
 }

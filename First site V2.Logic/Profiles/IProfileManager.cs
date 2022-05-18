@@ -13,4 +13,5 @@ public interface IProfileManager
     void AddProfile(string login, string password, string name, string surname);
     int RemoveProfile(string login, string password);
     void AddReport(int Id, string reportText);
+    List<Report> GetAllReports();
 }

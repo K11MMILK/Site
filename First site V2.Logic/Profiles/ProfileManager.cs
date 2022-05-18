@@ -35,7 +35,6 @@ namespace First_site_V2.Logic.Profiles
         public  void AddProfile(string login, string password, string name, string surname)
         {
             context.People.Add(new Profile(login, password, name, surname));
-            context.Reports.Add(new Report());
             context.SaveChanges();
         }
 
@@ -80,12 +79,27 @@ namespace First_site_V2.Logic.Profiles
 
         public void AddReport(int Id, string reportText)
         {
-            context.Reports.Find(Id).Reports.Add(new Report(reportText));
+            context.Reports.Add(new Report(reportText, context.People.Find(Id).Name));
+            context.SaveChanges();
         }
 
         public int GetIdByLogin(string login)
         {
-            return context.People.FirstOrDefault(x=>x.Login==login).Id;
+            if(context.People.FirstOrDefault(x => x.Login == login)!=null)
+                return context.People.FirstOrDefault(x => x.Login == login).Id;
+           else
+                return 0;
+            
+            }
+
+        public List<Report> GetAllReports()
+        {
+            if(context.Reports != null)
+            return context.Reports.ToList();
+            else
+            {
+                return null;
+            }
         }
     }
 }
