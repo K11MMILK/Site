@@ -24,9 +24,8 @@
         </div>
         <div class="row">
             <div style="float: left; width: 25%;height:300px;">
-                <form method="post">
-                    <input type="hidden" name="login" value="@Model.Login" />
-                    <button type="submit">Add friend</button>
+                <form asp-controller="Page" asp-action="Report" method="get">
+                    <button>Пожаловаться</button>
                 </form>
             </div>
         </div>

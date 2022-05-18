@@ -18,11 +18,6 @@ namespace First_site_V2.Controllers
             
             return View(manager.GetProfile(login));
         }
-        [HttpPost]
-        public IActionResult PersonProfile(string login, int a)
-        {
-            manager.AddFriend(_login, login);
-            return View(manager.GetProfile(login));
-        }
+        
     }
 }

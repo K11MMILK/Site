@@ -27,6 +27,12 @@ namespace First_site_V2.Controllers
         }
 
         [HttpGet]
+        public IActionResult Report()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult AllPeople()
         {
             var patau=manager.GetAll();

@@ -1,4 +1,3 @@
-using First_site_V2.Logic.Friends;
 using First_site_V2.Logic.Profiles;
 using First_site_V2.Storage;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +10,6 @@ var services = builder.Services;
 services.AddControllersWithViews();
 
 services.AddScoped<IProfileManager, ProfileManager>();
-services.AddScoped<IFriendsManager, FriendsManager>();
 
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 services.AddDbContext<GaisContext>(param => param.UseSqlServer(connectionString));
