@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J3gpxJJZOcxK++YH6sXbm7C42VhxKxTG7NkteXQ4oKs=",
+  "Hash": "mkpBE4dyPPt1eaP1LEQMdErBLxUxq3BYcyYmTg+I3cU=",
   "Source": "First site V2",
   "BasePath": "_content/First site V2",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\wwwroot\\css\\Telefon.png",
+      "SourceId": "First site V2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\wwwroot\\",
+      "BasePath": "_content/First site V2",
+      "RelativePath": "css/Telefon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Telefon.png"
     },
     {
       "Identity": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\wwwroot\\favicon.ico",

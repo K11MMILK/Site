@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E5QWmFjI3CxK3sWP8Y/n7I0KCWfXQL6iHMfnviQL2/xmnMJkADMz0kzr4zVTiI2LSZAaabqOmcknHCS7JFrZ+A==",
+  "dgSpecHash": "SsT/Q0JB5LQ69aslraFA5vuriaRtnT9FbC70IMQbXp6W3i/RiqmZgqz5B5Mx3urA/yq7KrcjFJHXH47ga3G0lA==",
   "success": true,
   "projectFilePath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
   "expectedPackageFiles": [
@@ -8,9 +8,11 @@
     "C:\\Users\\vasil\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\fluentassertions\\6.6.0\\fluentassertions.6.6.0.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\vasil\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.5\\microsoft.aspnetcore.cryptography.internal.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.5\\microsoft.aspnetcore.cryptography.keyderivation.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.5.nupkg.sha512",
+    "C:\\Users\\vasil\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.5\\microsoft.aspnetcore.metadata.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -29,7 +31,7 @@
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.5\\microsoft.extensions.identity.core.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.5\\microsoft.extensions.identity.stores.6.0.5.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
-    "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\vasil\\.nuget\\packages\\microsoft.identity.client\\4.21.1\\microsoft.identity.client.4.21.1.nupkg.sha512",

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace First_site_V2.Storage.Migrations
 {
-    public partial class InitialCreat : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,18 @@ namespace First_site_V2.Storage.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_FriendRequest", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FriendRequest_Users_ReceiverId",
+                        column: x => x.ReceiverId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_FriendRequest_Users_SenderId",
+                        column: x => x.SenderId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,7 +70,18 @@ namespace First_site_V2.Storage.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Friends", x => x.Id);
-                   
+                    table.ForeignKey(
+                        name: "FK_Friends_Users_FriendId",
+                        column: x => x.FriendId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Friends_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,7 +97,12 @@ namespace First_site_V2.Storage.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Post", x => x.Id);
-                   
+                    table.ForeignKey(
+                        name: "FK_Post_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,7 +119,18 @@ namespace First_site_V2.Storage.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Photos", x => x.Id);
-                    
+                    table.ForeignKey(
+                        name: "FK_Photos_Post_PostId",
+                        column: x => x.PostId,
+                        principalTable: "Post",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Photos_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_site_V2.Storage.Migrations
 {
     [DbContext(typeof(GaisContext))]
-    [Migration("20220517221627_InitialCreat")]
-    partial class InitialCreat
+    [Migration("20220518135449_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

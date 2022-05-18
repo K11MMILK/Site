@@ -136,3 +136,6 @@ C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNet
 C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\vasil\source\repos\Site\First site V2\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

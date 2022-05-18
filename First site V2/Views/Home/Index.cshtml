@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "User Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-3 well text-center">
+        <div class="well">
+            <p><a href="#">@User.Identity.Name</a></p>
+            <img src="/css/Telefon.png" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+
+    </div>
+    <div class="col-sm-7">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default text-left">
+                    <div class="panel-body">
+                        <p contenteditable="true">What do you think @(User.Identity.Name)?</p>
+                        <a class="btn btn-default btn-sm" asp-area="" asp-controller="Posts" asp-action="Create">Create Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

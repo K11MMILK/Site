@@ -1,7 +1,5 @@
-using First_site_V2.Logic.Photoes;
-using First_site_V2.Logic.UserManagment;
 using First_site_V2.Storage;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,11 +8,18 @@ var services = builder.Services;
 
 // Add services to the container.
 services.AddControllersWithViews();
-
-//services.AddScoped<IUserManager, UserManager>();
-//services.AddScoped<IPhotoManager, PhotoManager>();
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
+
 services.AddDbContext<GaisContext>(param => param.UseSqlServer(connectionString));
+
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,
+        options =>
+        {
+            options.LoginPath = new PathString("/Account/Login");
+            options.AccessDeniedPath = new PathString("/auth/denied");
+        });
+
 
 var app = builder.Build();
 
