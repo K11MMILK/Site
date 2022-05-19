@@ -1,0 +1,23 @@
+﻿@model ICollection<First_site_V2.Storage.Entities.Profile>
+
+    <h3>Участники сообщества</h3><br /><br />
+
+
+
+     @foreach(var member in Model)
+     {
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-dark text-white d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src=@member.PNG height="100" width="100" />
+        </div>
+        <div>
+          <h2>@member.Name @member.Surname</h2>
+          
+          <form method="get" action="/PersonProfile/PersonProfile">
+            <input type="hidden" name="login" value="@member.Login">
+            <button type="submit">Перейти на профиль</button><br /><br />
+        </form>
+        </div>
+      </div>
+      <br/><br/>
+     }

@@ -1,8 +1,18 @@
-﻿@{ 
-    ViewData["Title"] = "Регистрация"; 
- }
+﻿@{
+    ViewData["Title"] = "Регистрация";
+}
+@model First_site_V2.Storage.Entities.diologi_ted_a_ted
+
+
 
 <form method="post">
+    @if (Model != null)
+{
+    @if (Model.fl == 1)
+    {
+        <label>Такой Логин уже существует</label><br /><br />
+    }
+}
     <label>Логин:</label><br />
     <input required type="text" name="login" /><br /><br />
     <label>Пароль:</label><br />

@@ -22,20 +22,33 @@
                 </div>
             </div>
              <div class="row">
-            <div style="float: left; width: 25%;height:300px;">
+            <div style="float: left; width: 25%;height:60px;">
                 <form asp-controller="Page" asp-action="Report" method="get">
-                    <button>Пожаловаться</button>
+                    <button>Пожаловаться</button><br />
                 </form>
             </div>
         </div>
          <div class="row">
-            <div style="float: left; width: 25%;height:300px;">
+            <div style="float: left; width: 25%;height:90px;">
                 <form asp-controller="Page" asp-action="AddPicture" method="post">
-                    <p><input type="text" placeholder="ВВедите URL картинки" name="pictureURL" /><button type="submit">Добавить Картинку</button> </p>          
+                    <p><input type="text" placeholder="ВВедите URL картинки" name="pictureURL" /><button type="submit">Добавить Картинку</button> </p>    <br />      
                 </form>
             </div>
         </div>
+        <div class="row">
+        <div style="float: left; width: 25%;height:60px;">
+                <form asp-controller="Commun" asp-action="CreateNewCommunity" method="get">
+                    <button>Создать сообщество</button><br />
+                </form>
+            </div>
         </div>
-       
+         <div class="row">
+            <div style="float: left; width: 25%;height:60px;">
+                <form asp-controller="Page" asp-action="EditProfile" method="get">
+                    <button>Изменить профиль</button><br />
+                </form>
+            </div>
+        </div>
+       </div>
     </div>
 </div>

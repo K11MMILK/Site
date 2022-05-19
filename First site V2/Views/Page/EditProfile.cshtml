@@ -1,0 +1,17 @@
+﻿@model First_site_V2.Storage.Entities.Profile
+
+<h3>Введите изменения:</h3>
+<div>
+     <form asp-controller="Page" asp-action="EditProfile" method="post">
+        <label>Статус:</label><br />
+        <input required type="text" name="status" placeholder="Введиете Статус" value = "@Model.Status"/><br /><br />
+        <label>Имя:</label><br />
+        <input required type="text" name="name" placeholder = "Введиет Имя" value ="@Model.Name"/><br /><br />
+        <label>Фамилия:</label><br />
+        <input required type="text" name="surname" placeholder = "Введите Фамилию" value="@Model.Surname"/><br /><br />
+        <label>Аватар:</label><br />
+        <input required type="text" name="png" placeholder="Введите URL-адрес картинки" value = "@Model.PNG"/><br /><br />
+        <input required type="hidden" name="login" value="@Model.Login" /><br /><br />
+        <button type="submit">Принять изменения</button>
+     </form>
+    </div>

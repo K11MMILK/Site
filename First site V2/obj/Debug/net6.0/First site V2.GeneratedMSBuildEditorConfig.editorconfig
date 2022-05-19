@@ -15,12 +15,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vasil\source\repos\Site\First site V2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Commun/AllCommunities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXEFsbENvbW11bml0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Commun/CreateNewCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXENyZWF0ZU5ld0NvbW11bml0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Commun/Members.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXE1lbWJlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Commun/ToCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXFRvQ29tbXVuaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Home/DeleteProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Home/Registration.cshtml]
@@ -43,6 +63,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxSZXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/AllReportsOnUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxSZXBvcnRzT25Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Page/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +85,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/FriendProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uUHJvZmlsZVxGcmllbmRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/GetReportOnUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uUHJvZmlsZVxHZXRSZXBvcnRPblVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/PersonProfile.cshtml]

@@ -1,6 +1,8 @@
 ﻿@model ICollection<First_site_V2.Storage.Entities.Picture>
-<div>
-    @foreach(var item in Model)
+<div class="container px-4 py-5" id="all-people">
+    <h2 class="pb-2 border-bottom">Изображения</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+ @foreach(var item in Model)
     {
         <div>
         <button >
@@ -8,4 +10,5 @@
         </button>
         </div>
     }
-</div>
+    </div>
+  </div>

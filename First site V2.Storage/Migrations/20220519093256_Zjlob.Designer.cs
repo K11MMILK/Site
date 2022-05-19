@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_site_V2.Storage.Migrations
 {
     [DbContext(typeof(GaisContext))]
-    [Migration("20220519041230_AddFriends")]
-    partial class AddFriends
+    [Migration("20220519093256_Zjlob")]
+    partial class Zjlob
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,6 +22,27 @@ namespace First_site_V2.Storage.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("First_site_V2.Storage.Entities.Community", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PNG")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Community");
+                });
 
             modelBuilder.Entity("First_site_V2.Storage.Entities.Friend", b =>
                 {
@@ -33,6 +54,14 @@ namespace First_site_V2.Storage.Migrations
 
                     b.Property<int>("FriendId")
                         .HasColumnType("int");
+
+                    b.Property<string>("FriendName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FriendSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -71,6 +100,9 @@ namespace First_site_V2.Storage.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CommunityId")
                         .HasColumnType("int");
 
                     b.Property<string>("Login")
@@ -121,6 +153,33 @@ namespace First_site_V2.Storage.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Reports");
+                });
+
+            modelBuilder.Entity("First_site_V2.Storage.Entities.ReportOnUser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("RecieverId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReportText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SenderName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReportsOnUsers");
                 });
 #pragma warning restore 612, 618
         }

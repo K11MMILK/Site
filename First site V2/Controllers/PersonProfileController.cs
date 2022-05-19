@@ -16,7 +16,9 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult PersonProfile(string login)
         {
-            if(login != null)
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
+            if (login == _login) return RedirectToAction("Profile", "Page");
+            if (login != null)
             _friendLogin=login;
             if(manager.IsFriend(manager.GetProfile(_login).Id, manager.GetProfile(_friendLogin).Id)==false)
             return View(manager.GetProfile(_friendLogin));
@@ -38,6 +40,17 @@ namespace First_site_V2.Controllers
         public IActionResult RemoveFriend(string login)
         {
             manager.RemoveFriend(manager.GetProfile(_login).Id, manager.GetProfile(_friendLogin));
+            return RedirectToAction("PersonProfile", "PersonProfile");
+        }
+        [HttpGet]
+        public IActionResult GetReportOnUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult GetReportOnUser(string reportText)
+        {
+            manager.AddReportOnUser(manager.GetIdByLogin(_login), manager.GetIdByLogin( _friendLogin), reportText);
             return RedirectToAction("PersonProfile", "PersonProfile");
         }
     }

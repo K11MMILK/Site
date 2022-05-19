@@ -1,3 +1,4 @@
+using First_site_V2.Logic.Communities;
 using First_site_V2.Logic.Profiles;
 using First_site_V2.Storage;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ var services = builder.Services;
 services.AddControllersWithViews();
 
 services.AddScoped<IProfileManager, ProfileManager>();
+services.AddScoped<ICommunityManager, CommunityManager>();
 
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 services.AddDbContext<GaisContext>(param => param.UseSqlServer(connectionString));

@@ -172,5 +172,34 @@ namespace First_site_V2.Logic.Profiles
             }
             return Founded;
         }
+        
+        public void EditProfile(string status, string name, string surname, string png, string login)
+        {
+            var person=context.People.FirstOrDefault(x => x.Login==login);
+            context.People.Find(GetIdByLogin(login)).Status = status;
+            context.People.Find(GetIdByLogin(login)).Name = name;
+            context.People.Find(GetIdByLogin(login)).Surname = surname;
+            context.People.Find(GetIdByLogin(login)).PNG = png;
+            context.SaveChanges();
+        }
+
+        public void AddReportOnUser(int senderId, int recieverId, string report)
+        {
+            context.ReportsOnUsers.Add(new ReportOnUser() { RecieverId = recieverId, SenderId = senderId, ReportText = report, SenderName=GetProfile(senderId).Name });
+            context.SaveChanges();
+        }
+
+        public IList<ReportOnUser> GetAllReportsOnUser(int recieverId)
+        {
+            var item = new List<ReportOnUser>();
+            foreach(var report in context.ReportsOnUsers)
+            {
+                if (report.RecieverId == recieverId)
+                {
+                    item.Add(report);
+                }
+            }
+            return item;
+        }
     }
 }

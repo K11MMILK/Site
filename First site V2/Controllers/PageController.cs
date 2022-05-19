@@ -40,7 +40,7 @@ namespace First_site_V2.Controllers
         public IActionResult Report(string reportText)
         {
             manager.AddReport(manager.GetIdByLogin(_login), reportText);
-            return Content("Ваше мнение очень важно для Вас");
+            return RedirectToAction("Profile", "Page");
         }
         [HttpGet]
         public IActionResult AllPeople()
@@ -104,6 +104,28 @@ namespace First_site_V2.Controllers
         {
             List<Profile> popls = new List<Profile>(manager.SearchFriend(nameorsurname, manager.GetIdByLogin(_login)));
             return View(popls);
+        }
+        [HttpPost]
+        public IActionResult EditProfile(string status, string name, string surname, string png, string login)
+        {
+            _login = login;
+            manager.EditProfile(status, name, surname, png, login);
+            return RedirectToAction("Profile", "Page");
+
+        }
+        [HttpGet]
+        public IActionResult EditProfile()
+        {
+            
+            return View(manager.GetProfile(_login));
+
+        }
+        [HttpGet]
+        public IActionResult AllReportsOnUser()
+        {
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
+            return View(manager.GetAllReportsOnUser(manager.GetIdByLogin(_login)));
+
         }
     }
 }

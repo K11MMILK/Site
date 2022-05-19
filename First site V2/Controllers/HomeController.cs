@@ -56,9 +56,17 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult Registration(string login, string password, string name, string surname)
         {
-            _login = login;
-            manager.AddProfile(login, password, name, surname);
-            return View("/Views/Page/Profile.cshtml", manager.GetProfile(login));
+            if (manager.GetProfile(login) == null)
+            {
+                manager.AddProfile(login, password, name, surname);
+                _login = login;
+                return View("/Views/Page/Profile.cshtml", manager.GetProfile(login));
+            }
+            else
+            {
+                return View(new diologi_ted_a_ted() { fl=1});
+            }
+            
         }
 
         public IActionResult Index()

@@ -23,4 +23,7 @@ public interface IProfileManager
     void RemoveFriend(int userId, Profile friend);
     IList<Friend> GetAllFriends(int userId);
     bool IsFriend(int userId, int friendId);
+    void EditProfile(string status, string name, string surname, string png, string login);
+    void AddReportOnUser(int senderId,int recieverId,  string report);
+    IList<ReportOnUser> GetAllReportsOnUser(int recieverId);
 }
