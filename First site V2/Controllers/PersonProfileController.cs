@@ -6,6 +6,7 @@ namespace First_site_V2.Controllers
     public class PersonProfileController : Controller
     {
         public string _login;
+        private static string _friendLogin; 
         private IProfileManager manager;
         public PersonProfileController(IProfileManager manager)
         {
@@ -15,14 +16,29 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult PersonProfile(string login)
         {
-            
-            return View(manager.GetProfile(login));
+            if(login != null)
+            _friendLogin=login;
+            if(manager.IsFriend(manager.GetProfile(_login).Id, manager.GetProfile(_friendLogin).Id)==false)
+            return View(manager.GetProfile(_friendLogin));
+            else return View("/Views/PersonProfile/FriendProfile.cshtml", manager.GetProfile(_friendLogin));
         }
         [HttpGet]
         public IActionResult AllPictures(int PersonId)
         {
 
             return View(manager.GetAllImages(PersonId));
+        }
+        [HttpGet]
+        public IActionResult AddFriend(string login)
+        {
+            manager.AddFriend(manager.GetProfile(_login).Id, manager.GetProfile(_friendLogin));
+            return RedirectToAction("PersonProfile", "PersonProfile");
+        }
+        [HttpGet]
+        public IActionResult RemoveFriend(string login)
+        {
+            manager.RemoveFriend(manager.GetProfile(_login).Id, manager.GetProfile(_friendLogin));
+            return RedirectToAction("PersonProfile", "PersonProfile");
         }
     }
 }

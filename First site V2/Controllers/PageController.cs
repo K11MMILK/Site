@@ -20,6 +20,7 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult Profile()
         {
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
             return View(manager.GetProfile(_login));
 
         }
@@ -63,6 +64,7 @@ namespace First_site_V2.Controllers
         }
         public IActionResult AllReports()
         {
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
             return View(manager.GetAllReports());
         }
 
@@ -82,7 +84,26 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult AllPictures()
         {
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
             return View(manager.GetAllImages(manager.GetIdByLogin(_login)));
+        }
+        [HttpGet]
+        public IActionResult AllFriends()
+        {
+            if (manager.GetProfile(_login) == null) return RedirectToAction("Login", "Home");
+            var friends = new List<Profile>();
+            var friendsId=manager.GetAllFriends(manager.GetIdByLogin(_login));
+            foreach(var friendId in friendsId)
+            {
+                friends.Add(manager.GetProfile(friendId.FriendId));
+            }
+            return View(friends);
+        }
+        [HttpPost]
+        public IActionResult AllFriends (string nameorsurname)
+        {
+            List<Profile> popls = new List<Profile>(manager.SearchFriend(nameorsurname, manager.GetIdByLogin(_login)));
+            return View(popls);
         }
     }
 }

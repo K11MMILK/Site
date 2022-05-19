@@ -24,9 +24,9 @@
         </div>
         <div class="row">
             <div style="float: left; width: 25%;height:30px;">
-                <form asp-controller="PersonProfile" asp-action="AddFriend" method="get">
-                    <input type="hidden" value=@Model.Login name="login" />
-                    <button type="submit">Подписаться</button>
+                <form asp-controller="PersonProfile" asp-action="RemoveFriend" method="get">
+                    <input type="hidden" value=@Model.Id name="PersonId" />
+                    <button type="submit">Отписаться</button>
                 </form>
             </div>
         </div>

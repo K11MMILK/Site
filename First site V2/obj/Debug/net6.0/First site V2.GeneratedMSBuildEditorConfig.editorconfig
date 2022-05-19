@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/AllFriends.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxGcmllbmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vasil/source/repos/Site/First site V2/Views/Page/AllPeople.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxQZW9wbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/AllPictures.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uUHJvZmlsZVxBbGxQaWN0dXJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/FriendProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uUHJvZmlsZVxGcmllbmRQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/PersonProfile.cshtml]

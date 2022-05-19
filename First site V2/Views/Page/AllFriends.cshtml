@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Друзья";
+}
+@model ICollection<First_site_V2.Storage.Entities.Profile>
+@if (Model == null)
+{
+    <p>Список подписок пуст</p>
+}
+else{
+<div>
+    <form method="post">
+        <input required type="text" name="nameorsurname" /><button type="submit" value="Send">Search</button><br /><br />
+    </form>
+    @foreach (var human in Model)
+    {
+        <form method="get" action="/PersonProfile/PersonProfile">
+            <input type="hidden" name="login" value="@human.Login">
+            <button type="submit"><img src=@human.PNG height="100" width="100" /> @human.Name @human.Surname </button><br /><br />
+        </form>
+       
+    }
+
+</div>
+}

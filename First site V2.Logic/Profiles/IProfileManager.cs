@@ -7,7 +7,9 @@ public interface IProfileManager
 {
     int GetIdByLogin(string login);
     Profile GetProfile(string login);
+    Profile GetProfile(int id);
     ICollection<Profile> SearchProfile(string nameorsurname);
+    ICollection<Profile> SearchFriend(string nameorsurname, int userId);
     Profile GetProfile(string login, string password);
     IList<Profile> GetAll();
     void AddProfile(string login, string password, string name, string surname);
@@ -17,4 +19,8 @@ public interface IProfileManager
     void AddPicture(string picture, int Id);
     void AddAvatar(string picture, int Id);
     IList<Picture> GetAllImages(int Id);
+    void AddFriend(int userId, Profile friend);
+    void RemoveFriend(int userId, Profile friend);
+    IList<Friend> GetAllFriends(int userId);
+    bool IsFriend(int userId, int friendId);
 }

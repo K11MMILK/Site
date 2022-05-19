@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace First_site_V2.Storage.Migrations
 {
     [DbContext(typeof(GaisContext))]
-    [Migration("20220519013447_AddPicture")]
-    partial class AddPicture
+    [Migration("20220519041230_AddFriends")]
+    partial class AddFriends
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,6 +22,25 @@ namespace First_site_V2.Storage.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("First_site_V2.Storage.Entities.Friend", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("FriendId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Friends");
+                });
 
             modelBuilder.Entity("First_site_V2.Storage.Entities.Picture", b =>
                 {

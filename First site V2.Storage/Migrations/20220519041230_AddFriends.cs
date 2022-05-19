@@ -4,10 +4,24 @@
 
 namespace First_site_V2.Storage.Migrations
 {
-    public partial class AddPicture : Migration
+    public partial class AddFriends : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Friends",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    FriendId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Friends", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "People",
                 columns: table => new
@@ -58,6 +72,9 @@ namespace First_site_V2.Storage.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Friends");
+
             migrationBuilder.DropTable(
                 name: "People");
 

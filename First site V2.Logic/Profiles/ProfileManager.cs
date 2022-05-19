@@ -113,5 +113,64 @@ namespace First_site_V2.Logic.Profiles
             }
             return images;
         }
+
+        public void AddFriend(int userId, Profile friend)
+        {
+            context.Friends.Add(new Friend() { FriendId=friend.Id, UserId= userId, FriendName=friend.Name, FriendSurname=friend.Surname });
+            context.SaveChanges();
+        }
+
+        public void RemoveFriend(int userId, Profile friend)
+        {
+            var delete = new Friend();
+            foreach(var item in context.Friends.ToList())
+            {
+                if (item.UserId == userId && item.FriendId == friend.Id)
+                {
+                    delete= item;
+                    break;
+                }
+            }
+            context.Friends.Remove(delete);
+            context.SaveChanges();
+        }
+
+        public IList<Friend> GetAllFriends(int userId)
+        {
+            var friends = new List<Friend>();
+            foreach(var item in context.Friends.ToList())
+            {
+                if (item.UserId == userId) friends.Add(item);
+            }
+            return friends;
+        }
+
+        public bool IsFriend(int userId, int friendId)
+        {
+            foreach (var item in context.Friends.ToList())
+            {
+                if (item.UserId == userId&&item.FriendId==friendId) return true;
+            }
+            return false;
+        }
+
+        public Profile GetProfile(int id)
+        {
+            if (context.People.Find(id) != null)
+            return context.People.Find(id);
+            else return null;
+        }
+
+        public ICollection<Profile> SearchFriend(string nameorsurname, int userId)
+        {
+            List<Profile> Founded = new List<Profile> { };
+            foreach (var person in GetAllFriends(userId))
+            {
+                
+                if ((person.FriendName==nameorsurname) || (person.FriendSurname == nameorsurname))
+                    Founded.Add(GetProfile(person.FriendId));
+            }
+            return Founded;
+        }
     }
 }
