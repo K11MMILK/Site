@@ -4,7 +4,7 @@
 
 namespace First_site_V2.Storage.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class AddPicture : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,20 @@ namespace First_site_V2.Storage.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Pictures",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Imagin = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pictures", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reports",
                 columns: table => new
                 {
@@ -46,6 +60,9 @@ namespace First_site_V2.Storage.Migrations
         {
             migrationBuilder.DropTable(
                 name: "People");
+
+            migrationBuilder.DropTable(
+                name: "Pictures");
 
             migrationBuilder.DropTable(
                 name: "Reports");

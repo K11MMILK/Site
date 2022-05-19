@@ -1,6 +1,10 @@
 ﻿using First_site_V2.Logic.Profiles;
 using First_site_V2.Storage.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using System.Net.Http.Headers;
+using System.Web;
+using static System.Net.WebRequestMethods;
 
 namespace First_site_V2.Controllers
 {
@@ -40,8 +44,8 @@ namespace First_site_V2.Controllers
         [HttpGet]
         public IActionResult AllPeople()
         {
-            var patau=manager.GetAll();
-            foreach(var delete in patau)
+            var patau = manager.GetAll();
+            foreach (var delete in patau)
             {
                 if (delete.Login == _login)
                 {
@@ -62,5 +66,23 @@ namespace First_site_V2.Controllers
             return View(manager.GetAllReports());
         }
 
+
+        [HttpPost]
+        public IActionResult AddAvatar(string pictureURL)
+        {          
+            manager.AddAvatar(pictureURL, manager.GetIdByLogin(_login));
+            return RedirectToAction("Profile", "Page");
+        }
+        [HttpPost]
+        public IActionResult AddPicture(string pictureURL)
+        {
+            manager.AddPicture(pictureURL, manager.GetIdByLogin(_login));
+            return RedirectToAction("Profile", "Page");
+        }
+        [HttpGet]
+        public IActionResult AllPictures()
+        {
+            return View(manager.GetAllImages(manager.GetIdByLogin(_login)));
+        }
     }
 }

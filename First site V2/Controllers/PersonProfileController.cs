@@ -18,6 +18,11 @@ namespace First_site_V2.Controllers
             
             return View(manager.GetProfile(login));
         }
-        
+        [HttpGet]
+        public IActionResult AllPictures(int PersonId)
+        {
+
+            return View(manager.GetAllImages(PersonId));
+        }
     }
 }

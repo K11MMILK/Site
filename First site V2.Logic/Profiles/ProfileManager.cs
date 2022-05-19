@@ -59,22 +59,12 @@ namespace First_site_V2.Logic.Profiles
             if (profile != null)
                 if (profile.Password == password)
                 {
+                    context.Pictures.Remove(context.Pictures.FirstOrDefault(x => x.UserId == GetIdByLogin(login)));
                     context.People.Remove(profile);
                     context.SaveChanges();
                     return 2;
                 }
             return 1;
-            //var HumanForDelete = context.People.FirstOrDefault(x => x.Login == login);
-            //if (HumanForDelete != null)
-            //{
-            //    if (HumanForDelete.Password == password)
-            //    {
-            //        context.People.Remove(HumanForDelete);
-            //        context.SaveChanges();
-            //        return 2;
-            //    }
-            //}
-            //return 1;
         }
 
         public void AddReport(int Id, string reportText)
@@ -92,7 +82,7 @@ namespace First_site_V2.Logic.Profiles
             
             }
 
-        public List<Report> GetAllReports()
+        public IList<Report> GetAllReports()
         {
             if(context.Reports != null)
             return context.Reports.ToList();
@@ -100,6 +90,28 @@ namespace First_site_V2.Logic.Profiles
             {
                 return null;
             }
+        }
+
+        public void AddPicture(string picture, int Id)
+        {
+            context.Pictures.Add(new Picture() { Imagin=picture, UserId=Id});
+            context.SaveChanges();
+        }
+
+        public void AddAvatar(string picture, int Id)
+        {
+            context.People.Find(Id).PNG = picture;
+            context.SaveChanges();
+        }
+
+        public IList<Picture> GetAllImages(int Id)
+        {
+            List<Picture> images = new List<Picture>();
+            foreach(var item in context.Pictures.ToList())
+            {
+                if (item.UserId == Id) images.Add(item);
+            }
+            return images;
         }
     }
 }

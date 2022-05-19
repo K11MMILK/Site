@@ -24,8 +24,9 @@
         </div>
         <div class="row">
             <div style="float: left; width: 25%;height:300px;">
-                <form asp-controller="Page" asp-action="Report" method="get">
-                    <button>Пожаловаться</button>
+                <form asp-controller="PersonProfile" asp-action="AllPictures" method="get">
+                    <input type="hidden" value=@Model.Id name="PersonId" />
+                    <button type="submit">Все Фото</button>
                 </form>
             </div>
         </div>
