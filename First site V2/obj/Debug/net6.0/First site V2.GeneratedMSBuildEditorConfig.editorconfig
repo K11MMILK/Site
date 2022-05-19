@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Mila\Source\Repos\Site1\First site V2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Commun/AllCommunities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXEFsbENvbW11bml0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Commun/CreateNewCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXENyZWF0ZU5ld0NvbW11bml0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Commun/ToCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuXFRvQ29tbXVuaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Home/DeleteProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

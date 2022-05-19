@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj": {}
+    "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\First site V2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\First site V2.Logic.csproj": {
+    "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\First site V2.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\First site V2.Logic.csproj",
+        "projectUniqueName": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\First site V2.Logic.csproj",
         "projectName": "First site V2.Logic",
-        "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\First site V2.Logic.csproj",
-        "packagesPath": "C:\\Users\\vasil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\obj\\",
+        "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\First site V2.Logic.csproj",
+        "packagesPath": "C:\\Users\\Mila\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mila\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {
-                "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj"
+              "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj": {
+                "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj"
               }
             }
           }
@@ -66,20 +66,20 @@
         }
       }
     },
-    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {
+    "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
+        "projectUniqueName": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj",
         "projectName": "First site V2.Storage",
-        "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj",
-        "packagesPath": "C:\\Users\\vasil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\obj\\",
+        "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj",
+        "packagesPath": "C:\\Users\\Mila\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mila\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -150,20 +150,20 @@
         }
       }
     },
-    "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj": {
+    "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\First site V2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj",
+        "projectUniqueName": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\First site V2.csproj",
         "projectName": "First site V2",
-        "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\First site V2.csproj",
-        "packagesPath": "C:\\Users\\vasil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2\\obj\\",
+        "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\First site V2.csproj",
+        "packagesPath": "C:\\Users\\Mila\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vasil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mila\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -178,11 +178,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\First site V2.Logic.csproj": {
-                "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Logic\\First site V2.Logic.csproj"
+              "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\First site V2.Logic.csproj": {
+                "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Logic\\First site V2.Logic.csproj"
               },
-              "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj": {
-                "projectPath": "C:\\Users\\vasil\\source\\repos\\Site\\First site V2.Storage\\First site V2.Storage.csproj"
+              "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj": {
+                "projectPath": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2.Storage\\First site V2.Storage.csproj"
               }
             }
           }

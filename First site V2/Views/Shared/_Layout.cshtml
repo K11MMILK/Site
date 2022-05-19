@@ -7,8 +7,51 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
+<body class="h-100 text-white bg-dark">
+    <header class="p-3 bg-dark text-white border-bottom">
+    <div class="container">
+        @*<a class="navbar-brand" asp-area="" asp-controller="Page" asp-action="Profile">Gais</a>*@
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        @*<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>*@
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a class="navbar-brand" asp-area="" asp-controller="Page" asp-action="Profile">Gais</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Page" asp-action="Profile">Профиль</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Page" asp-action="AllPeople">Люди</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Friends" asp-action="Friends">Друзья</a>
+                        </li>
+                    </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <form asp-controller="Home" asp-action="Login" method="get"style="float: left">
+          <button class="btn btn-outline-light me-2">Login</button>
+          </form>
+          <form asp-controller="Home" asp-action="Registration" method="get"style="float: right">
+          <button class="btn btn-warning">Sign-up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+    @*<header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Page" asp-action="Profile">Gais</a>
@@ -31,7 +74,7 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>*@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -40,7 +83,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - First_site_V2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Gais Pososimbus my ass - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

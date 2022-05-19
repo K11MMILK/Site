@@ -2,7 +2,15 @@
     ViewData["Title"] = "Вход";
 }
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
-
+<html>
+     <style>
+   body {
+    background: src(fon.jpg); 
+    color: #fff; 
+   }
+  </style>
+  <body>
+      <br />
 <form method="post">
     @if (Model.fl == 1)
     {
@@ -16,3 +24,5 @@
     <a href="~/Home/Registration" class="btn">Регистрация</a><br /><br />
     <button type="submit">Отправить</button>
 </form>
+</body>
+</html>

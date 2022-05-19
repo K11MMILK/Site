@@ -1,9 +1,13 @@
 ﻿<div class="text-center">
    <h3>Что Вам не понравилось на нашем сайте?</h3> 
 </div>
-<div align="center">
-    <form method="post">
-        <input style="float: left; width: 25%;height:300px;width:900px;" required type="text" placeholder="Не нада Дядя" value="Ничего, все отлично=)"  name="reportText" /><br />
-        <button type="submit">Отправить</button>
-    </form>
-</div>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  @model First_site_V2.Storage.Entities.Report
+
+<form asp-controller="Page" asp-action="Report" method="post">
+    <textarea placeholder="Отличный сайт. Я случайно сюда попал/а" style = "display: inline-block;
+  margin: 10px auto; border: 2px solid #eee; padding: 10px 20px; font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;" hight: 1000px; width: 3000px;" asp-for="ReportText"></textarea>
+    <button type="submit">Test</button>
+</form>

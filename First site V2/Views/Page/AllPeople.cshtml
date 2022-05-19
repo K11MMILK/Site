@@ -2,7 +2,7 @@
     ViewData["Title"] = "Люди";
 }
 @model ICollection<First_site_V2.Storage.Entities.Profile>
-<div>
+@*<div>
     <form method="post">
         <input required type="text" name="nameorsurname" /><button type="submit" value="Send">Search</button><br /><br />
     </form>
@@ -15,4 +15,30 @@
        
     }
 
-</div>
+</div>*@
+
+<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input required type="search" name="nameorsurname" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+<div class="container px-4 py-5" id="all-people">
+    <h2 class="pb-2 border-bottom">Люди</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+ @foreach (var human in Model)
+    {
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-dark text-white d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src=@human.PNG height="100" width="100" />
+        </div>
+        <div>
+          <h2>@human.Name @human.Surname</h2>
+          <p>@human.Status</p>
+          <form method="get" action="/PersonProfile/PersonProfile">
+            <input type="hidden" name="login" value="@human.Login">
+            <button type="submit">Перейти на профиль</button><br /><br />
+        </form>
+        </div>
+      </div>
+      }
+    </div>
+  </div>

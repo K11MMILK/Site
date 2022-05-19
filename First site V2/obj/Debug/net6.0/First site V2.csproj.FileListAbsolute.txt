@@ -128,3 +128,14 @@ C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\scopedcss\project
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\First site V2.csproj.CopyComplete
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\First site V2.genruntimeconfig.cache
 C:\Users\Mila\Source\Repos\Site\First site V2\obj\Debug\net6.0\ref\First site V2.dll
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.csproj.AssemblyReference.cache
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.AssemblyInfoInputs.cache
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.AssemblyInfo.cs
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.csproj.CoreCompileInputs.cache
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.RazorAssemblyInfo.cache
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.RazorAssemblyInfo.cs
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.dll
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\refint\First site V2.dll
+C:\Users\Mila\Source\Repos\Site1\First site V2\obj\Debug\net6.0\First site V2.pdb

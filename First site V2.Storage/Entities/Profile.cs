@@ -10,7 +10,7 @@ namespace First_site_V2.Storage.Entities
         public int Id { get; set; }
         public string Login{ get; set; }
         public string Password{ get; set; }
-
+        public List<Lint> CommunityId { get; set; }
         public Profile() { }
 
         public Profile(string login, string password, string name, string surname, string png = "/css/i.png") : base(name, surname)
