@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = First_site_V2
 build_property.RootNamespace = First_site_V2
-build_property.ProjectDir = C:\Users\vasil\source\repos\Site\First site V2\
+build_property.ProjectDir = C:\Users\Mila\Source\Repos\Site1\First site V2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\vasil\source\repos\Site\First site V2
+build_property.MSBuildProjectDirectory = C:\Users\Mila\Source\Repos\Site1\First site V2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Home/DeleteProfile.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Home/DeleteProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Home/Login.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Home/Registration.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Home/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/AllPeople.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Page/AllPeople.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxQZW9wbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/AllReports.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Page/AllReports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxBbGxSZXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/Profile.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Page/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Page/Report.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Page/Report.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/PersonProfile/PersonProfile.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/PersonProfile/PersonProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uUHJvZmlsZVxQZXJzb25Qcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Shared/Error.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/_ViewImports.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/_ViewStart.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vasil/source/repos/Site/First site V2/Views/Shared/_Layout.cshtml]
+[C:/Users/Mila/Source/Repos/Site1/First site V2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-105s88czjr
