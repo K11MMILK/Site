@@ -28,6 +28,7 @@ namespace First_site_V2.Controllers
         [HttpPost]
         public IActionResult Login(string login, string password)
         {
+            
             _login = login;
             Profile patau = manager.GetProfile(login, password);
             diologi_ted_a_ted fl = new diologi_ted_a_ted { };
@@ -40,6 +41,11 @@ namespace First_site_V2.Controllers
                 else { fl.fl = 2;
                     return View("/Views/Page/Profile.cshtml", patau);
                 }
+            }
+            if (login == null)
+            {
+
+                fl.fl= 0;
             }
 
             return View(fl);

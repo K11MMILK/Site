@@ -4,7 +4,7 @@
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
 
 
-
+@*
 <form method="post">
     @if (Model != null)
 {
@@ -22,4 +22,62 @@
     <label>Фамилия:</label><br />
     <input required type="text" name="surname" /><br /><br />
     <input type="submit" value="Отправить" />
-</form>
+</form>*@
+@{
+    Layout = "";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gais</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body class="p-3 bg-dark text-white border-bottom" style="background-color:#212529; color:white">
+    
+<main class="form-signin w-10 m-auto">
+    <br/><br /><br /><br /><br /><br /><br />
+    
+
+  <form align = "center"method ="post">
+    <img style = "border-radius:100px"  src="/css/logo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 fw-normal">Зарегистрироваться</h1>
+    @if (Model != null)
+{
+    @if (Model.fl == 1)
+    {
+        <label>Такой Логин уже существует</label><br /><br />
+    }
+}
+
+    <div class="form-floating">
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="login"  placeholder="Логин">
+      
+    </div>
+    <br/>
+    <div >
+      <input required style = "border-radius:10px; width: 280px; height:40px;" type="password" name = "password" placeholder="Пароль">
+      
+    </div>
+    <br/>
+    <div>
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="name"  placeholder="Имя">
+      
+    </div>
+    <br/>
+    <div>
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="surname"  placeholder="Фамилия">
+      
+    </div>
+    <br/>
+    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Зарегистрироваться</button>
+    <p></p><p>ИЛИ</p>
+    
+    
+  </form>
+  <form asp-controller="Home" asp-action="Login" method="get"align="center">
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink">Войти</button>
+          </form>
+</main>
+</body>

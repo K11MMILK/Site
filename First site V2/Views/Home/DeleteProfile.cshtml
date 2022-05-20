@@ -5,21 +5,50 @@
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
 
 <form method="post">
-    @if (Model.fl == 0)
+    @if(Model.fl==2)
     {
-        <p>Чел не надо...</p>
+        <p>Удаление прошло успешно...</p><br/>
+        <form asp-controller="Home" asp-action="Login" method="get">
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 190px; height:38px; color: hotpink">Отменить изменения</button>
+        </form>
+    }
+    else
+    {
+        @if (Model.fl == 1)
+    {
+        <p>Логин или пароль не совпадают</p>
+    }
+    <br/>
+    <p>Чел не надо...</p>
+    <div class="form-floating">
+            Логин<br/>
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="login"  placeholder="Логин">
+    </div>
+    <br/>
+    <div >
+        Пароль<br/>
+      <input required style = "border-radius:10px; width: 280px; height:40px;" type="password" name = "password" placeholder="Пароль">
+      
+    </div>
+    <br/>
+    <form asp-controller="Page" asp-action="Profile" method="get">
+          <button type = "submit"class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 190px; height:38px; color: hotpink">Удалить профиль</button>
+          </form>
+    }
+    
+    @*@if (Model.fl == 0)
+    {
+        
         <label>Логин:</label><br/>
         <input required type="text" name="login" /><br /><br />
         <label>Пароль:</label><br/>
         <input required type="password" name="password" /><br/><br/>
         <a href="~/Home/Login" class="btn">Home</a><br /><br />
         <button type="submit" value="Send">Отправить</button>
-    }
-    @if(Model.fl==2)
-    {
-        <p>Удаление прошло успешно...</p><br/>
-        <a href="~/Home/Login" class="btn">Home</a>
-    }
+
+
+        
+    
     @if (Model.fl == 1)
     {
         <p>Логин или пароль не совпадают</p>
@@ -28,7 +57,9 @@
         <label>Пароль:</label><br/>
         <input required type="password" name="password" /><br/><br/>
         <a href="~/Home/Login" class="btn">Главная</a><br /><br />
-        <button type="submit" value="Send">Отправить</button>
+        <form asp-controller="Page" asp-action="Profile" method="get">
+          <button type = onsubmit class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 190px; height:38px; color: hotpink">Отменить изменения</button>
+          </form>
     }
-    
+    *@
 </form>

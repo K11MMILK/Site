@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LSca81uqE//nru3dBGCKZ4dfW45el87O9kWOlp9YoQg=",
+  "Hash": "xRLC8Mf/dfds0flp6Boqurv/uN8sD4gLwJ2ACNyYf2w=",
   "Source": "First site V2",
   "BasePath": "_content/First site V2",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\community.png"
     },
     {
+      "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\css\\Gais.png",
+      "SourceId": "First site V2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\",
+      "BasePath": "_content/First site V2",
+      "RelativePath": "css/Gais.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Gais.png"
+    },
+    {
       "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\css\\i.png",
       "SourceId": "First site V2",
       "SourceType": "Discovered",
@@ -102,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\css\\klim-revolt.jpg"
     },
     {
+      "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\css\\logo.png",
+      "SourceId": "First site V2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\",
+      "BasePath": "_content/First site V2",
+      "RelativePath": "css/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\logo.png"
+    },
+    {
       "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\css\\site.css",
       "SourceId": "First site V2",
       "SourceType": "Discovered",
@@ -134,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\Gais1.png",
+      "SourceId": "First site V2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\",
+      "BasePath": "_content/First site V2",
+      "RelativePath": "Gais1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Gais1.png"
     },
     {
       "Identity": "C:\\Users\\Mila\\Source\\Repos\\Site1\\First site V2\\wwwroot\\js\\site.js",

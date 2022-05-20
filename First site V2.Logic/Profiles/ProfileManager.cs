@@ -175,6 +175,7 @@ namespace First_site_V2.Logic.Profiles
         
         public void EditProfile(string status, string name, string surname, string png, string login)
         {
+            if (status == null) status = " ";
             var person=context.People.FirstOrDefault(x => x.Login==login);
             context.People.Find(GetIdByLogin(login)).Status = status;
             context.People.Find(GetIdByLogin(login)).Name = name;

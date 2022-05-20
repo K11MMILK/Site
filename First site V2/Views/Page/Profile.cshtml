@@ -4,15 +4,13 @@
 @{
     ViewData["Title"] = $"{@Model.Name} {@Model.Surname}";
 }
+<body style = "background-color:#212529">
 <div class="main">
     <div class="container">
+        <br/>
         <div class="row">
             <div style="float: left; width: 25%;height:300px;">
-                <form action =@Model.PNG target="_blank">
-                    <button >
-                        <img src=@Model.PNG height="275" width="275"/>
-                    </button>
-                </form>
+                        <img style = "border-radius:200px" src=@Model.PNG height="275" width="275"/>
             </div>
 
             <div style="float: right; width: 72%;height:300px;">
@@ -21,34 +19,24 @@
                     <p>@Model.Status</p>
                 </div>
             </div>
-             <div class="row">
-            <div style="float: left; width: 25%;height:60px;">
-                <form asp-controller="Page" asp-action="Report" method="get">
-                    <button>Пожаловаться</button><br />
-                </form>
-            </div>
-        </div>
          <div class="row">
-            <div style="float: left; width: 25%;height:90px;">
-                <form asp-controller="Page" asp-action="AddPicture" method="post">
-                    <p><input type="text" placeholder="ВВедите URL картинки" name="pictureURL" /><button type="submit">Добавить Картинку</button> </p>    <br />      
-                </form>
-            </div>
+            
         </div>
         <div class="row">
-        <div style="float: left; width: 25%;height:60px;">
-                <form asp-controller="Commun" asp-action="CreateNewCommunity" method="get">
-                    <button>Создать сообщество</button><br />
-                </form>
-            </div>
+        
         </div>
          <div class="row">
             <div style="float: left; width: 25%;height:60px;">
                 <form asp-controller="Page" asp-action="EditProfile" method="get">
-                    <button>Изменить профиль</button><br />
-                </form>
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink">Изменить профиль</button>
+          </form>
+          <br/>
+          <form asp-controller="Home" asp-action="DeleteProfile" method="get">
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink">Удалить профиль</button>
+          </form>
             </div>
         </div>
        </div>
     </div>
 </div>
+</body>

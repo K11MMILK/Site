@@ -23,7 +23,7 @@
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>*@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a  class="navbar-brand" asp-area="" asp-controller="Page" asp-action="Profile"><h4 style="color:hotpink;">Gais</h4></a></li>
+            <li><a  class="navbar-brand" asp-area="" asp-controller="Page" asp-action="Profile"><img style = "border-radius:1000px; height: 50px; width: 100px" src ="~/css/Gais.png"/></a></li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Page" asp-action="Profile">Профиль</a>
                         </li>
@@ -45,11 +45,13 @@
                     </ul>
 
         <div class="text-end">
-          <form asp-controller="Home" asp-action="Login" method="get"style="float: left">
-          <button class="btn btn-outline-light me-2">Login</button>
+          <form asp-controller="Page" asp-action="Report" method="get"style="float: left">
+          <button class="btn btn-outline-light me-2">Пожаловаться</button>
           </form>
-          <form asp-controller="Home" asp-action="Registration" method="get"style="float: right">
-          <button class="btn btn-outline-light me-2">Registration</button>
+          <form asp-controller="Home" asp-action="Login" method="get"style="float: right">
+          <button class="btn btn-outline-light me-2">Выйти</button>
+          <input type = "hidden" value = null name = "login" />
+          <input type = "hidden" value = null name = "password" />
           </form>
         </div>
       </div>

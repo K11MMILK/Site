@@ -79,7 +79,7 @@ namespace First_site_V2.Controllers
         public IActionResult AddPicture(string pictureURL)
         {
             manager.AddPicture(pictureURL, manager.GetIdByLogin(_login));
-            return RedirectToAction("Profile", "Page");
+            return RedirectToAction("AllPictures", "Page");
         }
         [HttpGet]
         public IActionResult AllPictures()

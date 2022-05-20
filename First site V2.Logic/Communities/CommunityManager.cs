@@ -79,5 +79,34 @@ namespace First_site_V2.Logic.Communities
             }
             return posts;
         }
+
+        public void DeleteCommunity(int communityId)
+        {
+            context.Community.Remove(context.Community.Find(communityId));
+            context.SaveChanges();
+        }
+
+        public void DeletePost(int postId)
+        {
+            context.Posts.Remove(context.Posts.Find(postId));
+            context.SaveChanges();
+        }
+
+        public ICollection<Community> SearchCommunity(string name)
+        {
+            List<Community> communityList = new List<Community>();
+            foreach(var community in context.Community)
+            {
+                if(community.Name==name)
+                    communityList.Add(community);
+            }
+            return communityList;
+        }
+        public void LeaveCommunity(int memberId)
+        {
+            context.People.Find(memberId).CommunityId = null;
+            context.SaveChanges();
+
+        }
     }
 }

@@ -33,10 +33,10 @@
         <div>
           <h2>@human.Name @human.Surname</h2>
           <p>@human.Status</p>
-          <form method="get" action="/PersonProfile/PersonProfile">
+        <form asp-controller="PersonProfile" asp-action="PersonProfile" method="get">
             <input type="hidden" name="login" value="@human.Login">
-            <button type="submit">Перейти на профиль</button><br /><br />
-        </form>
+          <button type = "submit" class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink">Перейти на профиль</button>
+          </form>
         </div>
       </div>
       }

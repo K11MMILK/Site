@@ -18,5 +18,9 @@ namespace First_site_V2.Logic.Communities
         public ICollection<Profile> GetAllMembers(int communityId);
         public void AddNewPost(int CommunityId, string textPost, string png);
         public ICollection<Post> GetAllPosts(int communityId);
+        public void DeleteCommunity(int communityId);
+        public void DeletePost(int postId);
+        public ICollection<Community> SearchCommunity(string name);
+        public void LeaveCommunity(int memberId);
     }
 }

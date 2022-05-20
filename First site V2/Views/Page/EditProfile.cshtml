@@ -3,15 +3,47 @@
 <h3>Введите изменения:</h3>
 <div>
      <form asp-controller="Page" asp-action="EditProfile" method="post">
-        <label>Статус:</label><br />
-        <input required type="text" name="status" placeholder="Введиете Статус" value = "@Model.Status"/><br /><br />
-        <label>Имя:</label><br />
-        <input required type="text" name="name" placeholder = "Введиет Имя" value ="@Model.Name"/><br /><br />
-        <label>Фамилия:</label><br />
-        <input required type="text" name="surname" placeholder = "Введите Фамилию" value="@Model.Surname"/><br /><br />
-        <label>Аватар:</label><br />
-        <input required type="text" name="png" placeholder="Введите URL-адрес картинки" value = "@Model.PNG"/><br /><br />
+        @*<label>Статус:</label><br />
+        <input required type="text" name="status" placeholder="Введиете Статус" /><br /><br />
+        
+        <input required type="text" name="name" placeholder = "Введиет Имя" /><br /><br />
+        
+        <input required type="text" name="surname" placeholder = "Введите Фамилию"/><br /><br />
+        
+        <input required type="text" name="png" placeholder="Введите URL-адрес картинки" /><br /><br />
         <input required type="hidden" name="login" value="@Model.Login" /><br /><br />
-        <button type="submit">Принять изменения</button>
+        <button type="submit">Принять изменения</button>*@
+
+
+        <div class="form-floating">
+            Статус:<br />
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="status" value = "@Model.Status" placeholder="Введите статус">
+      
+    </div>
+    <br/>
+    <div >
+        Имя:<br />
+      <input required style = "border-radius:10px; width: 280px; height:40px;" type="text" name = "name" value ="@Model.Name" placeholder="Введите имя">
+      
+    </div>
+    <br/>
+    <div>
+        Фамилия:<br />
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="name"  value="@Model.Surname" placeholder="Введите фамилию">
+      
+    </div>
+    <br/>
+    <div>
+        Аватар:<br />
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="surname" value = "@Model.PNG" placeholder="Введите URL-адрес картинки">
+      
+    </div>
+    <br/>
+    <button type = "submit" class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 190px; height:38px; color: hotpink">Принять изменения</button>
      </form>
+     <br/>
+     <form asp-controller="Page" asp-action="Profile" method="get">
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 190px; height:38px; color: hotpink">Отменить изменения</button>
+          </form>
+
     </div>

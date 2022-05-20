@@ -2,26 +2,47 @@
     ViewData["Title"] = "Вход";
 }
 @model First_site_V2.Storage.Entities.diologi_ted_a_ted
-<html>
-     <style>
-   body {
-    background: src(fon.jpg); 
-    color: #fff; 
-   }
-  </style>
-  <body>
-      <br />
-<form method="post">
+@{
+    Layout = "";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gais</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body class="p-3 bg-dark text-white border-bottom" style="background-color:#212529; color:white">
+    
+<main class="form-signin w-10 m-auto">
+    <br/><br /><br /><br /><br /><br /><br />
+
+  <form align = "center"method ="post">
+    <img style = "border-radius:100px"  src="/css/logo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 fw-normal">Войти в систему</h1>
     @if (Model.fl == 1)
     {
         <div>Неправильный логин или пароль</div><br /><br />
     }
+
+    <div class="form-floating">
+      <input required style = "border-radius:10px; width: 280px; height:40px;"type="text" name="login"  placeholder="Логин">
+      
+    </div>
+    <br/>
+    <div >
+      <input required style = "border-radius:10px; width: 280px; height:40px;" type="password" name = "password" placeholder="Пароль">
+      
+    </div>
+    <br/>
+    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Войти</button>
+    <p></p><p>ИЛИ</p>
     
-    <label>Логин:</label><br />
-    <input required type="text" name="login" placeholder="Введите логин"/><br /><br />
-    <label>Пароль:</label><br />
-    <input required type="password" name="password" placeholder="Введите пароль"/><br /><br />
-    <button type="submit">Отправить</button>
-</form>
+    
+  </form>
+  <form asp-controller="Home" asp-action="Registration" method="get"align="center">
+          <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink">Зарегистрироваться</button>
+          </form>
+</main>
 </body>
-</html>
