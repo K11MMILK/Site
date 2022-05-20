@@ -7,11 +7,9 @@
     <div class="container">
         <div class="row">
             <div style="float: left; width: 25%;height:300px;">
-                <form action =@Model.PNG target="_blank">
-                    <button >
-                        <img src=@Model.PNG height="275" width="275"/>
-                    </button>
-                </form>
+                
+                        <img style = "border-radius:200px" src=@Model.PNG height="275" width="275"/>
+                    
             </div>
 
             <div style="float: right; width: 72%;height:300px;">
@@ -26,22 +24,24 @@
             <div style="float: left; width: 25%;height:30px;">
                 <form asp-controller="PersonProfile" asp-action="RemoveFriend" method="get">
                     <input type="hidden" value=@Model.Id name="PersonId" />
-                    <button type="submit">Отписаться</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink" type="submit">Отписаться</button>
                 </form>
             </div>
         </div>
+        <br/>
         <div class="row">
             <div style="float: left; width: 25%;height:30px;">
                 <form asp-controller="PersonProfile" asp-action="GetReportOnUser" method="get">
-                    <button type="submit">Отправить сообщение</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink" type="submit">Отправить сообщение</button>
                 </form>
             </div>
         </div>
+        <br/>
         <div class="row">
             <div style="float: left; width: 25%;height:30px;">
                 <form asp-controller="PersonProfile" asp-action="AllPictures" method="get">
                     <input type="hidden" value=@Model.Id name="PersonId" />
-                    <button type="submit">Все Фото</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink" type="submit">Все Фото</button>
                 </form>
             </div>
         </div>

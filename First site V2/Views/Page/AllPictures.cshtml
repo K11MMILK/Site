@@ -8,7 +8,8 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div style="float: left; width: 33%;height:90px;">
                 <form asp-controller="Page" asp-action="AddPicture" method="post">
-                    <p><input type="text" placeholder="ВВедите URL картинки" name="pictureURL" /><button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Добавить Картинку</button> </p>    <br />      
+                    <p><input style = "border-radius:10px; width: 280px; height:40px;"type="text" name="pictureURL"  placeholder="Введите URL картинки"><button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Добавить Картинку</button> </p>    <br />      
+               
                 </form>
             </div>
  @foreach(var item in Model)

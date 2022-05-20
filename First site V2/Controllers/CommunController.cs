@@ -40,7 +40,7 @@ namespace First_site_V2.Controllers
         public IActionResult JoinToCommunity(int id, int a=1)
         {
             manager.JoinToCommunity(manager.GetMember(login).Id, id);
-            return View("ToCommunity",manager.GetCommunity(id));
+            return View("ToFriendCommunity",manager.GetCommunity(id));
         }
         [HttpGet]
         public IActionResult CreateNewCommunity()

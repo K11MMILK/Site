@@ -17,8 +17,14 @@
 
                     <form asp-controller="Commun" asp-action="LeaveCommunity" method="post">
                         <input type="hidden" name="id" value="@Model.Id">
-                        <button>Покинуть в сообщество</button>
+                        <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink">Покинуть сообщество</button>
                     </form>
+                    <p></p>
+                    <form asp-controller="Commun" asp-action="DeleteCommunity" method="get">
+                    <input type="hidden" name="id" value="@Model.Id">
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink" type = "submit">Удалить сообщество</button>
+                    </form>
+
                 </div>
             </div>
              <div class="row">
@@ -26,12 +32,14 @@
 
                 <form asp-controller="Commun" asp-action="Members" method="post">
                     <input type="hidden" name="id" value="@Model.Id">
-                    <button>Показать участников</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink">Показать участников</button>
                     </form>
+                    <p></p>
                     <form asp-controller="Commun" asp-action="NewPost" method="get">
                     <input type="hidden" name="communityId" value="@Model.Id">
-                    <button type = "submit">Добавить пост</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink" type = "submit">Добавить пост</button>
                 </form>
+                <p></p>
                     @if (Model.HasPosts == false)
                     {
                         <p>У данного сообщества нет постов</p>
@@ -39,12 +47,12 @@
                     else{
                     <form asp-controller="Commun" asp-action="AllPosts" method="post">
                     <input type="hidden" name="id" value="@Model.Id">
-                    <button>Показать все посты</button>
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 200px; height:38px; color: hotpink">Показать все посты</button>
                     </form>
                     }
         </div>
       </div>
-                    }
+                    
                 </div>
     </div>
 </div>
