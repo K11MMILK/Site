@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace First_site_V2.Storage.Entities
 {
@@ -10,5 +11,7 @@ namespace First_site_V2.Storage.Entities
         public string SenderName { get; set; }
         public int RecieverId { get; set; }
         public string ReportText { get; set; }
+        [ForeignKey(nameof(RecieverId))]
+        public virtual Profile Reciever { get; set; }
     }
 }

@@ -1,24 +1,34 @@
 ﻿@model ICollection<First_site_V2.Storage.Entities.Picture>
 
+  <div class="container px-4 py-5" id="all-people">
+    <div>
+    <h2 class="pb-2 border-bottom">Сообщества</h2>
 
-<div class="container px-4 py-5" id="all-people">
-    
-    <h2 class="pb-2 border-bottom">Изображения</h2>
-  
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div style="float: left; width: 33%;height:90px;">
-                <form asp-controller="Page" asp-action="AddPicture" method="post">
-                    <p><input style = "border-radius:10px; width: 280px; height:40px;"type="text" name="pictureURL"  placeholder="Введите URL картинки"><button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Добавить Картинку</button> </p>    <br />      
-               
+
+            </div><br />
+            <div class="text-end" style="height:60px;">
+                 <form asp-controller="Page" asp-action="AddPicture" method="post">
+                    <p><input style="border-radius:10px; width: 180px; height:38px" type="text" placeholder="ВВедите URL картинки" name="pictureURL" /><button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Добавить Картинку</button> </p>    <br />
                 </form>
-            </div>
+                </div>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
  @foreach(var item in Model)
     {
         <div>
-        <button action=@item.Imagin>
-            <img src="@item.Imagin" height="275" width="275" />
-        </button>
+            <div>
+            <button formaction=@item.Imagin>
+                <img src="@item.Imagin" height="275" width="275" />
+            </button>
+            </div>
+            <div>
+                <form asp-action="RemovePicture" asp-controller="Page" method="get">
+                    <input type="hidden" name="id" value=@item.Id />
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 180px; height:38px; color: hotpink" type="submit">Удалить</button>
+                </form>
+            </div>
         </div>
     }
     </div>
-  </div>
+
+    </div>

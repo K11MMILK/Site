@@ -1,4 +1,4 @@
-﻿@model ICollection<First_site_V2.Storage.Entities.Community>
+﻿@*@model ICollection<First_site_V2.Storage.Entities.Community>
 
     <form method="post" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <input required type="search" name="name" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
@@ -35,5 +35,46 @@
         </div>
       </div>
       }
+    </div>*@
+
+    @model ICollection<First_site_V2.Storage.Entities.Community>
+
+    <form method="post" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input required type="search" name="name" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+
+
+<div class="container px-4 py-5" id="all-people">
+    <div>
+    <h2 class="pb-2 border-bottom">Сообщества</h2>
+
+
+            </div><br />
+            <div class="text-end" style="height:60px;">
+                <form asp-controller="Commun" asp-action="CreateNewCommunity" method="get">
+                    <button class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 205px; height:38px; color: hotpink">Создать сообщество</button><br />
+                </form>
+                </div>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+ @foreach (var community in Model)
+    {
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-dark text-white d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src=@community.PNG height="100" width="100" />
+        </div>
+        <div>
+          <h2>@community.Name </h2>
+          <p></p>
+        <form asp-controller="Commun" asp-action="ToCommunity" method="post">
+            <input type="hidden" name="id" value="@community.Id">
+          <button type = "submit" class = "btn btn-outline-light me-2" style = "border-radius:10px; width: 205px; height:38px; color: hotpink">Перейти в сообщество</button>
+          </form>
+        </div>
+      </div>
+      }
+    </div>
+
     </div>
   

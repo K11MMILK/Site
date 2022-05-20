@@ -26,4 +26,6 @@ public interface IProfileManager
     void EditProfile(string status, string name, string surname, string png, string login);
     void AddReportOnUser(int senderId,int recieverId,  string report);
     IList<ReportOnUser> GetAllReportsOnUser(int recieverId);
+    void RemovePicture(int Id);
+
 }

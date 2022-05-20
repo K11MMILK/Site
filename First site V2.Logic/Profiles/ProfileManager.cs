@@ -200,7 +200,13 @@ namespace First_site_V2.Logic.Profiles
                     item.Add(report);
                 }
             }
+            item.Reverse();
             return item;
+        }
+        public void RemovePicture(int id)
+        {
+            context.Pictures.Remove(context.Pictures.Find(id));
+            context.SaveChanges();
         }
     }
 }

@@ -1,11 +1,15 @@
 ﻿@model ICollection<First_site_V2.Storage.Entities.ReportOnUser>
 
-    <div>
-    @foreach(var item in Model)
+
+<div class="container px-4 py-5" id="all-people">
+    <h2 class="pb-2 border-bottom">Сообщения</h2>
+    <div class="row">
+ @foreach(var item in Model)
     {
         <div>
             <p>@item.SenderName - @item.ReportText</p>
         </div><br />
 
     }
-</div>
+    </div>
+  </div>

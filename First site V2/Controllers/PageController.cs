@@ -127,5 +127,11 @@ namespace First_site_V2.Controllers
             return View(manager.GetAllReportsOnUser(manager.GetIdByLogin(_login)));
 
         }
+        [HttpGet]
+        public IActionResult RemovePicture(int id)
+        {
+            manager.RemovePicture(id);
+            return RedirectToAction("AllPictures", "Page");
+        }
     }
 }

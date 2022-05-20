@@ -9,5 +9,6 @@ namespace First_site_V2.Storage.Entities
         public int Id { get; set; }
         public string ImageURL { get; set; }
         
+        
     }
 }
