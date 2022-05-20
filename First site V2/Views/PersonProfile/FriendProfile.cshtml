@@ -32,6 +32,13 @@
         </div>
         <div class="row">
             <div style="float: left; width: 25%;height:30px;">
+                <form asp-controller="PersonProfile" asp-action="GetReportOnUser" method="get">
+                    <button type="submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div style="float: left; width: 25%;height:30px;">
                 <form asp-controller="PersonProfile" asp-action="AllPictures" method="get">
                     <input type="hidden" value=@Model.Id name="PersonId" />
                     <button type="submit">Все Фото</button>
