@@ -18,7 +18,9 @@ namespace First_site_V2.Storage
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<Friend> Friends { get; set; }
         public DbSet<Community> Community { get; set; }
+        public DbSet<Post> Posts { get; set; }
         public DbSet<ReportOnUser> ReportsOnUsers { get; set; }
+
 
     }
 }

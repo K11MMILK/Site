@@ -16,9 +16,9 @@
                     <h2>@Model.Name </h2>
                     
                     <form asp-controller="Commun" asp-action="JoinToCommunity" method="get">
-                        <input type="hidden" name="id" value="@Model.Id">
-                        <input type="hidden" name="a" value="1">
-                    <button>Вступить в сообщество</button>
+                    <input type="hidden" name="id" value="@Model.Id">
+                    <input type="hidden" name="a" value="1">
+                    <button type = "submit">Вступить в сообщество</button>
                     </form>
                 </div>
             </div>
@@ -27,8 +27,22 @@
                     
                 <form asp-controller="Commun" asp-action="Members" method="post">
                     <input type="hidden" name="id" value="@Model.Id">
-                    <button>Показать участников</button>
+                    <button type = "submit">Показать участников</button>
+                </form>
+                <form asp-controller="Commun" asp-action="NewPost" method="get">
+                    <input type="hidden" name="communityId" value="@Model.Id">
+                    <button type = "submit">Добавить пост</button>
+                </form>
+                    @if (Model.HasPosts == false)
+                    {
+                        <p>У данного сообщества нет постов</p>
+                    }
+                    else{
+                    <form asp-controller="Commun" asp-action="AllPosts" method="post">
+                    <input type="hidden" name="id" value="@Model.Id">
+                    <button>Показать все посты</button>
                     </form>
+                    }
         </div>
       </div>
                     }

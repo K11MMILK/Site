@@ -13,6 +13,7 @@ namespace First_site_V2.Storage.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string PNG { get; set; }
+        public bool HasPosts { get; set; } = false; 
         public Community()
         {
 

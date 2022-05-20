@@ -16,5 +16,7 @@ namespace First_site_V2.Logic.Communities
         public void JoinToCommunity(int MemberId, int CommunityId);
         public Profile GetMember(string login);
         public ICollection<Profile> GetAllMembers(int communityId);
+        public void AddNewPost(int CommunityId, string textPost, string png);
+        public ICollection<Post> GetAllPosts(int communityId);
     }
 }

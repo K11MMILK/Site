@@ -58,5 +58,26 @@ namespace First_site_V2.Logic.Communities
             }
             return members;
         }
+
+        public void AddNewPost(int CommunityId, string textPost, string png)
+        {            
+            if(png != null)
+                context.Posts.Add(new Post(CommunityId, textPost) { PNG = png });
+            else
+                context.Posts.Add(new Post(CommunityId, textPost));
+            context.Community.Find(CommunityId).HasPosts = true;
+            context.SaveChanges();
+        }
+
+        public ICollection<Post> GetAllPosts(int communityId)
+        {
+            List<Post> posts = new List<Post>();
+            foreach(var post in context.Posts)
+            {
+                if(post.CommunityId==communityId)
+                    posts.Add(post);
+            }
+            return posts;
+        }
     }
 }
